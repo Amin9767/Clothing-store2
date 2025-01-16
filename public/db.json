@@ -1,0 +1,1717 @@
+{
+  "swiper": {
+    "mainSlide": [
+      {
+        "id": 1,
+        "imageMobile": "/slide/main/Best_Kids_Brand_01-Mobile_Size.webp",
+        "imageDesktop": "/slide/main/Best_Kids_Brand_01-Desktop_Size.webp"
+      },
+      {
+        "id": 2,
+        "imageMobile": "/slide/main/Best_Women_Brand_01-Mobile_Size.webp",
+        "imageDesktop": "/slide/main/Best_Women_Brand_01-Desktop_Size.webp"
+      },
+      {
+        "id": 3,
+        "imageMobile": "/slide/main/Mens_Winter_Clothing-Mobile_Size.webp",
+        "imageDesktop": "/slide/main/Mens_Winter_Clothing-Desktop_Size.webp"
+      }
+    ],
+    "زنانه": [
+      {
+        "id": 1,
+        "imageMobile": "/slide/women/mainSlide/Women_Party-Mobile_Size.webp",
+        "imageDesktop": "/slide/women/mainSlide/Women_Party-Desktop_Size.webp"
+      },
+      {
+        "id": 2,
+        "imageMobile": "/slide/women/mainSlide/Women_Purse-Mobile_Size_1.webp",
+        "imageDesktop": "/slide/women/mainSlide/Women_Purse-Desktop_Size_1.webp"
+      }
+    ],
+    "مردانه": [
+      {
+        "id": 1,
+        "imageMobile": "/slide/men/Male_Accessories-Mobile_Size.webp",
+        "imageDesktop": "/slide/men/Male_Accessories-Desktop_Size.webp"
+      },
+      {
+        "id": 2,
+        "imageMobile": "/slide/men/Sportwear-Mobile_Size.webp",
+        "imageDesktop": "/slide/men/Sportwear-Desktop_Size.webp"
+      }
+    ],
+    "بچه گانه": [
+      {
+        "id": 1,
+        "imageMobile": "/slide/kids/Kids-02-Mobile_Size.webp",
+        "imageDesktop": "/slide/kids/Kids-02-Desktop_Size.webp"
+      },
+      {
+        "id": 2,
+        "imageMobile": "/slide/kids/Roko-Mobile_Size.webp",
+        "imageDesktop": "/slide/kids/Roko-Desktop_Size.webp"
+      }
+    ]
+  },
+  "category": {
+    "main": [
+      {
+        "id": 1,
+        "title": "مردانه",
+        "image": "/products/daste/clo_men_1.webp"
+      },
+      {
+        "id": 2,
+        "title": "زنانه",
+        "image": "/products/daste/zan03_1.webp"
+      },
+      {
+        "id": 3,
+        "title": "بچه گانه",
+        "image": "/products/daste/child_1.webp"
+      },
+      {
+        "id": 4,
+        "title": "سوپر مارکت",
+        "image": "/products/daste/super_1.webp",
+        "isComingSoon": "به زودی"
+      },
+      {
+        "id": 5,
+        "title": "آرایشی",
+        "image": "/products/daste/arayesh_1.webp",
+        "isComingSoon": "به زودی"
+      },
+      {
+        "id": 6,
+        "title": "لوازم خانه",
+        "image": "/products/daste/khanegi_1.webp",
+        "isComingSoon": "به زودی"
+      },
+      {
+        "id": 7,
+        "title": "الکترونیک",
+        "image": "/products/daste/electro_1.webp",
+        "isComingSoon": "به زودی"
+      },
+      {
+        "id": 8,
+        "title": "سفر و ورزش",
+        "image": "/products/daste/kooh_1.webp",
+        "isComingSoon": "به زودی"
+      }
+    ],
+    "مردانه": [
+      {
+        "id": 1,
+        "title": "پلیور و هودی و سویشرت",
+        "image": "/products/daste/men/poliver.webp"
+      },
+      {
+        "id": 2,
+        "title": "کاپشن و پالتو و بارانی",
+        "image": "/products/daste/men/kafshan.webp"
+      },
+      {
+        "id": 3,
+        "title": "شلوار",
+        "image": "/products/daste/men/sholavr.webp"
+      },
+      {
+        "id": 4,
+        "title": "پیراهن",
+        "image": "/products/daste/men/pirahan.webp"
+      },
+      {
+        "id": 5,
+        "title": "لباس زیر",
+        "image": "/products/daste/men/short.webp"
+      },
+      {
+        "id": 6,
+        "title": "کیف و کفش ",
+        "image": "/products/daste/men/kif.webp",
+        "isComingSoon": "به زودی"
+      },
+      {
+        "id": 7,
+        "title": "اکسسوری",
+        "image": "/products/daste/men/x.webp",
+        "isComingSoon": "به زودی"
+      }
+    ],
+    "زنانه": [
+      {
+        "id": 1,
+        "title": "پالتو",
+        "image": "/products/daste/women/Coat-WL.webp"
+      },
+      {
+        "id": 6,
+        "title": "شال و روسری",
+        "image": "/products/daste/women/Scarf-WL.webp"
+      },
+      {
+        "id": 3,
+        "title": "شلوار",
+        "image": "/products/daste/women/Pants-WL.webp"
+      },
+      {
+        "id": 4,
+        "title": "لباس زیر و راحتی",
+        "image": "/products/daste/women/Underwear-WL.webp"
+      },
+      {
+        "id": 5,
+        "title": "کیف و کفش",
+        "image": "/products/daste/women/Shoes-WL.webp",
+        "isComingSoon": "به زودی"
+      },
+      {
+        "id": 2,
+        "title": "بافت و سویشرت",
+        "image": "/products/daste/women/Sweeshirt-WL.webp",
+        "isComingSoon": "به زودی"
+      },
+      {
+        "id": 7,
+        "title": "اکسسوری",
+        "image": "/products/daste/women/Accessories-WL.webp",
+        "isComingSoon": "به زودی"
+      }
+    ],
+    "دخترانه": [
+      {
+        "id": 1,
+        "title": "بلوز دخترانه",
+        "image": "/products/daste/girls/_-_-_-__5_1.jpg"
+      },
+      {
+        "id": 2,
+        "title": "شلوار و دامن دخترانه",
+        "image": "/products/daste/girls/_-_-__15_1.jpg"
+      },
+      {
+        "id": 3,
+        "title": "پلیور و سوئشرت دخترانه",
+        "image": "/products/daste/girls/_-_-_-__6.jpg",
+        "isComingSoon": "به زودی"
+      },
+      {
+        "id": 4,
+        "title": "پالتو و کاپشن دخترانه",
+        "image": "/products/daste/girls/_-_-_-__7.jpg",
+        "isComingSoon": "به زودی"
+      },
+      {
+        "id": 5,
+        "title": "تاپ و تیشرت دخترانه",
+        "image": "/products/daste/girls/_-_-_-__8.jpg",
+        "isComingSoon": "به زودی"
+      },
+      {
+        "id": 6,
+        "title": "کیف دخترانه",
+        "image": "/products/daste/girls/_-_-_-__9.jpg",
+        "isComingSoon": "به زودی"
+      },
+      {
+        "id": 7,
+        "title": "کفش دخترانه",
+        "image": "/products/daste/girls/Shoes_1.jpg",
+
+        "isComingSoon": "به زودی"
+      },
+      {
+        "id": 8,
+        "title": "لباس زیر و راحتی دخترانه",
+        "image": "/products/daste/girls/_-_-_-__10.jpg",
+
+        "isComingSoon": "به زودی"
+      },
+      {
+        "id": 9,
+        "title": "جوراب و جورا شلواری",
+        "image": "/products/daste/girls/_-_-_-__11.jpg",
+
+        "isComingSoon": "به زودی"
+      }
+    ],
+    "پسرانه":[
+      {
+        "id": 1,
+        "title": "پیراهن پسرانه",
+        "image": "/products/daste/kids/پسرانه/_-_-_-__12_1.jpg"
+      },
+      {
+        "id": 2,
+        "title": "تیشرت پسرانه",
+        "image": "/products/daste/kids/پسرانه/_-__17_1.jpg"
+      },
+      {
+        "id": 3,
+        "title": "کاپشن پسرانه",
+        "image": "/products/daste/kids/پسرانه/_-__18.jpg"
+      }
+    ],
+    "بچه گانه": [
+      {
+        "id": 1,
+        "title": "دخترانه",
+        "image": "/products/daste/kids/dokhtar004.webp"
+      },
+      {
+        "id": 2,
+        "title": "پسرانه",
+        "image": "/products/daste/kids/Artboard_1-1_1__1.webp"
+      },
+      {
+        "id": 3,
+        "title": "لباس نوزادی",
+        "image": "/products/daste/kids/Artboard_1-2_1__1.webp",
+        "isComingSoon": "به زودی"
+      },
+      {
+        "id": 4,
+        "title": "ملزومات کودک",
+        "image": "/products/daste/kids/Artboard_1-3_1__1.webp",
+        "isComingSoon": "به زودی"
+      },
+      {
+        "id": 5,
+        "title": "عروسک و شخصیت",
+        "image": "/products/daste/kids/Artboard_1-4_1__1.webp",
+        "isComingSoon": "به زودی"
+      },
+      {
+        "id": 6,
+        "title": "ست لباس نوزادی",
+        "image": "/products/daste/kids/Artboard_1-5_1__1.webp",
+        "isComingSoon": "به زودی"
+      },
+      {
+        "id": 7,
+        "title": "بازی و سرگرمی",
+        "image": "/products/daste/kids/Artboard_1-6_1__1.webp",
+        "isComingSoon": "به زودی"
+      }
+    ]
+  },
+  "products": {
+    "زنانه": {
+      "پالتو": [
+        {
+          "id": 1,
+          "title": "مانتو زنانه طوسی آر ان اس RNS کد 11092186",
+          "price": 840000,
+          "image": "/products/women/man1.jpg",
+          "createdAt": "2024-12-15T12:10:00Z",
+          "category": "women",
+          "subCategory": "پالتو"
+        },
+        {
+          "id": 2,
+          "title": "مانتو زنانه طوسی آر ان اس RNS کد 1192186",
+          "price": 870000,
+          "image": "/products/women/man2.webp",
+          "createdAt": "2024-12-16T14:40:00Z",
+          "category": "women",
+          "subCategory": "پالتو"
+        },
+        {
+          "id": 3,
+          "title": "مانتو زنانه طوسی آر ان اس RNS کد 1109186",
+          "price": 465000,
+          "image": "/products/women/man3.webp",
+          "createdAt": "2024-12-17T10:30:00Z",
+          "category": "women",
+          "subCategory": "پالتو"
+        }
+      ],
+      "شال و روسری": [
+        {
+          "id": 1,
+          "title": "شال مازراتی کد1",
+          "price": 250000,
+          "image": "/products/women/shal/cg5609_1_.webp",
+          "createdAt": "2024-12-19T08:00:00Z",
+          "category": "women",
+          "subCategory": "شال و روسری"
+        },
+        {
+          "id": 2,
+          "title": "شال مازراتی کد2",
+          "price": 460000,
+          "image": "/products/women/shal/nd8528_1_.webp",
+          "createdAt": "2024-12-18T10:30:00Z",
+          "category": "women",
+          "subCategory": "شال و روسری"
+        },
+        {
+          "id": 3,
+          "title": "شال مازراتی کد3",
+          "price": 630000,
+          "image": "/products/women/shal/nd8530_1_.webp",
+          "createdAt": "2024-12-20T09:00:00Z",
+          "category": "women",
+          "subCategory": "شال و روسری"
+        },
+        {
+          "id": 4,
+          "title": "شال مازراتی کد4",
+          "price": 210000,
+          "image": "/products/women/shal/nd8534_1_.webp",
+          "createdAt": "2024-12-17T11:15:00Z",
+          "category": "women",
+          "subCategory": "شال و روسری"
+        }
+      ],
+      "لباس زیر و راحتی": [
+        {
+          "id": 1,
+          "title": "لباس زیر کد1",
+          "price": 120000,
+          "image": "/products/women/underwear/cg3100_1_.webp",
+          "createdAt": "2024-12-18T12:30:00Z",
+          "category": "women",
+          "subCategory": "لباس زیر و راحتی"
+        },
+        {
+          "id": 2,
+          "title": "لباس زیر کد2",
+          "price": 150000,
+          "image": "/products/women/underwear/cg3103_1_.webp",
+          "createdAt": "2024-12-17T14:00:00Z",
+          "category": "women",
+          "subCategory": "لباس زیر و راحتی"
+        },
+        {
+          "id": 3,
+          "title": "لباس زیر کد3",
+          "price": 290000,
+          "image": "/products/women/underwear/cg3104_1_.webp",
+          "createdAt": "2024-12-19T13:10:00Z",
+          "category": "women",
+          "subCategory": "لباس زیر و راحتی"
+        },
+        {
+          "id": 4,
+          "title": "لباس زیر کد4",
+          "price": 340000,
+          "image": "/products/women/underwear/cg3106_1_.webp",
+          "createdAt": "2024-12-16T15:00:00Z",
+          "category": "women",
+          "subCategory": "لباس زیر و راحتی"
+        }
+      ],
+      "شلوار": [
+        {
+          "id": 1,
+          "title": "شلوار جین زنانه راسته",
+          "price": 450000,
+          "image": "/products/women/shalvar/cg8274_1_.webp",
+          "createdAt": "2024-12-16T10:10:00Z",
+          "category": "women",
+          "subCategory": "شلوار"
+        },
+        {
+          "id": 2,
+          "title": "شلوار جین زنانه ابی",
+          "price": 780000,
+          "image": "/products/women/shalvar/cg8501_1_.webp",
+          "createdAt": "2024-12-19T13:20:00Z",
+          "category": "women",
+          "subCategory": "شلوار"
+        },
+        {
+          "id": 3,
+          "title": "شلوار جین زنانه زرد",
+          "price": 950000,
+          "image": "/products/women/shalvar/cg8550_1_.webp",
+          "createdAt": "2024-12-17T12:30:00Z",
+          "category": "women",
+          "subCategory": "شلوار"
+        },
+        {
+          "id": 4,
+          "title": "شلوار جین زنانه سبز",
+          "price": 450000,
+          "image": "/products/women/shalvar/nf0299_1_.webp",
+          "createdAt": "2024-12-20T10:00:00Z",
+          "category": "women",
+          "subCategory": "شلوار"
+        }
+      ]
+    },
+    "مردانه": {
+      "پیراهن": [
+        {
+          "id": 1,
+          "title": "پیراهم مردانه مشکی ار ان اس",
+          "image": "/products/men/shirts/003092_2410117_0.webp",
+          "price": 400000
+        },
+        {
+          "id": 2,
+          "title": "پیراهم مردانه ابی ار ان اس",
+          "image": "/products/men/shirts/003092_2420129_0.webp",
+          "price": 360000
+        },
+        {
+          "id": 3,
+          "title": "پیراهم مردانه زرشکی ار ان اس",
+          "image": "/products/men/shirts/au3575_1_.webp",
+          "price": 650000
+        },
+        {
+          "id": 4,
+          "title": "پیراهم مردانه سفید ار ان اس",
+          "image": "/products/men/shirts/nf2760_1_.webp",
+          "price": 500000
+        },
+        {
+          "id": 5,
+          "title": "پیراهم مردانه زرد ار ان اس",
+          "image": "/products/men/shirts/nf2761_1_.webp",
+          "price": 450000
+        },
+        {
+          "id": 6,
+          "title": "پیراهم مردانه بنفس ار ان اس",
+          "image": "/products/men/shirts/nf2762_1_.webp",
+          "price": 340000
+        },
+        {
+          "id": 7,
+          "title": "پیراهم مردانه قرمز ار ان اس",
+          "image": "/products/men/shirts/nf2763_1_.webp",
+          "price": 700000
+        },
+        {
+          "id": 8,
+          "title": "پیراهم مردانه سبز ار ان اس",
+          "image": "/products/men/shirts/nf2764_1_.webp",
+          "price": 580000
+        },
+        {
+          "id": 9,
+          "title": "پیراهم مردانه سبز پسته ای ار ان اس",
+          "image": "/products/men/shirts/nf2765_1_.webp",
+          "price": 400000
+        }
+      ],
+      "شلوار": [
+        {
+          "id": 1,
+          "title": "شلوار جین مردانه راسته",
+          "price": 450000,
+          "image": "/products/men/pants/cg8249_1_.webp"
+        },
+        {
+          "id": 2,
+          "title": "شلوار جین مردانه ابی",
+          "price": 340000,
+          "image": "/products/men/pants/cg8250_1_.webp"
+        },
+        {
+          "id": 3,
+          "title": "شلوار جین مردانه زرد",
+          "price": 650000,
+          "image": "/products/men/pants/cg8785_1_.jpg"
+        },
+        {
+          "id": 4,
+          "title": "شلوار جین مردانه سبز",
+          "price": 620000,
+          "image": "/products/men/pants/nd6832_1_.webp"
+        },
+        {
+          "id": 5,
+          "title": "شلوار جین مردانه قزمز",
+          "price": 380000,
+          "image": "/products/men/pants/ne8787_1_.webp"
+        },
+        {
+          "id": 6,
+          "title": "شلوار جین مردانه مشکی",
+          "price": 420000,
+          "image": "/products/men/pants/ne8790_1_.webp"
+        },
+        {
+          "id": 7,
+          "title": "شلوار جین مردانه بنفش",
+          "price": 980000,
+          "image": "/products/men/pants/ne9912_1_.webp"
+        },
+        {
+          "id": 8,
+          "title": "شلوار جین مردانه نیلی",
+          "price": 570000,
+          "image": "/products/men/pants/nf2753_1_.webp"
+        },
+        {
+          "id": 9,
+          "title": "شلوار جین مردانه راسرمه سرمه ای",
+          "price": 450000,
+          "image": "/products/men/pants/nf2756_1_.webp"
+        }
+      ],
+      "اکسسوری": [
+        {
+          "id": 1,
+          "title": "اکسسوری کد1",
+          "price": 450000,
+          "image": "/products/men/pants/cg8249_1_.webp"
+        },
+        {
+          "id": 2,
+          "title": "اکسسوری کد2",
+          "price": 320000,
+          "image": "/products/men/pants/cg8250_1_.webp"
+        },
+        {
+          "id": 3,
+          "title": "اکسسوری کد3",
+          "price": 410000,
+          "image": "/products/men/pants/cg8785_1_.jpg"
+        },
+        {
+          "id": 4,
+          "title": " اکسسوری کد4",
+          "price": 680000,
+          "image": "/products/men/pants/nd6832_1_.webp"
+        },
+        {
+          "id": 5,
+          "title": "اکسسوری کد5",
+          "price": 230000,
+          "image": "/products/men/pants/ne8787_1_.webp"
+        },
+        {
+          "id": 6,
+          "title": "اکسسوری کد6",
+          "price": 540000,
+          "image": "/products/men/pants/ne8790_1_.webp"
+        },
+        {
+          "id": 7,
+          "title": " اکسسوری کد7",
+          "price": 590000,
+          "image": "/products/men/pants/ne9912_1_.webp"
+        },
+        {
+          "id": 8,
+          "title": " اکسسوری کد8  ",
+          "price": 450000,
+          "image": "/products/men/pants/nf2753_1_.webp"
+        },
+        {
+          "id": 9,
+          "title": " اکسسوری کد9  ",
+          "price": 450000,
+          "image": "/products/men/pants/nf2756_1_.webp"
+        }
+      ],
+      "کیف و کفش": [
+        {
+          "id": 1,
+          "title": "شلوار جین مردانه راسته",
+          "price": 200000,
+          "image": "/products/men/pants/cg8249_1_.webp"
+        },
+        {
+          "id": 2,
+          "title": "شلوار جین مردانه راسته",
+          "price": 450000,
+          "image": "/products/men/pants/cg8250_1_.webp"
+        },
+        {
+          "id": 3,
+          "title": "شلوار جین مردانه راسته",
+          "price": 280000,
+          "image": "/products/men/pants/cg8785_1_.jpg"
+        },
+        {
+          "id": 4,
+          "title": "شلوار جین مردانه راسته",
+          "price": 680000,
+          "image": "/products/men/pants/nd6832_1_.webp"
+        },
+        {
+          "id": 5,
+          "title": "شلوار جین مردانه راسته",
+          "price": 450000,
+          "image": "/products/men/pants/ne8787_1_.webp"
+        },
+        {
+          "id": 6,
+          "title": "شلوار جین مردانه راسته",
+          "price": 450000,
+          "image": "/products/men/pants/ne8790_1_.webp"
+        },
+        {
+          "id": 7,
+          "title": "شلوار جین مردانه راسته",
+          "price": 450000,
+          "image": "/products/men/pants/ne9912_1_.webp"
+        },
+        {
+          "id": 8,
+          "title": "شلوار جین مردانه راسته",
+          "price": 450000,
+          "image": "/products/men/pants/nf2753_1_.webp"
+        },
+        {
+          "id": 9,
+          "title": "شلوار جین مردانه راسته",
+          "price": 450000,
+          "image": "/products/men/pants/nf2756_1_.webp"
+        }
+      ],
+      "پلیور و هودی و سویشرت": [
+        {
+          "id": 1,
+          "title": "هودی مردانه طوسی سوپردرای Superdry کد M12A41601T",
+          "price": 450000,
+          "image": "/products/men/poliver/nf4058_1_.webp"
+        },
+        {
+          "id": 2,
+          "title": "هودی مردانه مشکی سوپردرای Superdry کد M12A41601T",
+          "price": 380000,
+          "image": "/products/men/poliver/nf4922_1_.webp"
+        },
+        {
+          "id": 3,
+          "title": "سویشرت مردانه سفید قرمز سوپردرای Superdry کد M12A40401T",
+          "price": 560000,
+          "image": "/products/men/poliver/nf4925_1_.webp"
+        },
+        {
+          "id": 4,
+          "title": "سویشرت مردانه شیری سرمه ای سوپردرای Superdry کد M12A40401T",
+          "price": 890000,
+          "image": "/products/men/poliver/nf5150_1_.webp"
+        },
+        {
+          "id": 5,
+          "title": "هودی مردانه قرمز آر ان اس RNS کد 12102289",
+          "price": 240000,
+          "image": "/products/men/poliver/nf5172_1_.webp"
+        },
+        {
+          "id": 6,
+          "title": "هودی مردانه سرمه ای آر ان اس RNS کد 12102277",
+          "price": 400000,
+          "image": "/products/men/poliver/nf5175_1_.webp"
+        },
+        {
+          "id": 7,
+          "title": "سویشرت مردانه مشکی دیورسو Diverso کد 4559",
+          "price": 660000,
+          "image": "/products/men/poliver/nf5189_1_.webp"
+        }
+      ],
+      "کاپشن و پالتو و بارانی": [
+        {
+          "id": 1,
+          "title": "کاپشن مردانه مشکی دیورسو Diverso کد 4562",
+          "price": 450000,
+          "image": "/products/men/kapshan/003092_2421004_0.webp"
+        },
+        {
+          "id": 2,
+          "title": "پافر مردانه دورو مشکی زرشکی دیورسو Diverso کد 4551",
+          "price": 470000,
+          "image": "/products/men/kapshan/cg8507_1_.webp"
+        },
+        {
+          "id": 3,
+          "title": "پافر مردانه کلاهدار دورو استخوانی آبی دیورسو Diverso کد 4547",
+          "price": 310000,
+          "image": "/products/men/kapshan/cg8511_1_.webp"
+        },
+        {
+          "id": 4,
+          "title": "کاپشن مردانه کلاهدار سبز ارتشی دیورسو Diverso کد 4546",
+          "price": 1100000,
+          "image": "/products/men/kapshan/nf4043_1_.webp"
+        },
+        {
+          "id": 5,
+          "title": "کاپشن مردانه کلاهدار سرمه ای دیورسو Diverso کد 4544",
+          "price": 750000,
+          "image": "/products/men/kapshan/nf4045_1_.webp"
+        },
+        {
+          "id": 6,
+          "title": "کاپشن مردانه سبز نعناعی مل اند موژ Mel & Moj کد M08637",
+          "price": 580000,
+          "image": "/products/men/kapshan/nf4046_1_.webp"
+        },
+        {
+          "id": 7,
+          "title": "کاپشن مردانه سرمه ای مل اند موژ Mel & Moj کد M08625",
+          "price": 360000,
+          "image": "/products/men/kapshan/nf4050_1_.webp"
+        },
+        {
+          "id": 8,
+          "title": "پلیور زیپ دار 2421004 کروم",
+          "price": 800000,
+          "image": "/products/men/kapshan/nf4061_1_.webp"
+        }
+      ],
+      "لباس زیر": [
+        {
+          "id": 1,
+          "title": "لباس زیر مردانه ابی",
+          "image": "/products/men/underWear/cg7777_1_.webp",
+          "price": 60000
+        },
+        {
+          "id": 2,
+          "title": "لباس زیر مردانه زرد",
+          "image": "/products/men/underWear/cg7778_1_.webp",
+          "price": 60000
+        },
+        {
+          "id": 3,
+          "title": "لباس زیر مردانه سبز",
+          "image": "/products/men/underWear/cg7779_1_.webp",
+          "price": 60000
+        },
+        {
+          "id": 4,
+          "title": "لباس زیر مردانه قرمز",
+          "image": "/products/men/underWear/cg7785_1_.webp",
+          "price": 60000
+        },
+        {
+          "id": 5,
+          "title": "لباس زیر مردانه بنفش",
+          "image": "/products/men/underWear/cg7786_1_.webp",
+          "price": 60000
+        },
+        {
+          "id": 6,
+          "title": "لباس زیر مردانه زرشکی",
+          "image": "/products/men/underWear/cg7789_1_.webp",
+          "price": 60000
+        },
+        {
+          "id": 7,
+          "title": "لباس زیر مردانه سرمه ای",
+          "image": "/products/men/underWear/cg7795_1_.webp",
+          "price": 60000
+        },
+        {
+          "id": 8,
+          "title": "لباس زیر مردانه صورتی",
+          "image": "/products/men/underWear/cg7796_1_.webp",
+          "price": 60000
+        }
+      ]
+    },
+    "بچه گانه": {
+      "دخترانه": {
+        "بلوز دخترانه": [
+          {
+            "id": 1,
+            "title": "بلوز دخترانه ملورینا Melorina طرح غنچه های آبی",
+            "image": "/products/children/girls/bolus/cg8812_1_.webp",
+            "price": 500000,
+            "createdAt": "2024-11-16T10:10:00Z",
+            "category": "kids",
+            "daste": "بلوز دخترانه"
+          },
+          {
+            "id": 2,
+            "title": "بلوز دخترانه کراپ ملورینا Melorina طرح ربات",
+            "image": "/products/children/girls/bolus/cg8813_1_.webp",
+
+            "price": 780000,
+            "createdAt": "2024-11-15T10:10:00Z",
+            "category": "kids",
+            "daste": "بلوز دخترانه"
+          },
+          {
+            "id": 3,
+            "title": "بلوز دخترانه ملورینا Melorina طرح گلبرگ",
+            "image": "/products/children/girls/bolus/cg8814_1_.webp",
+
+            "price": 430000,
+            "createdAt": "2024-11-14T10:10:00Z",
+            "category": "kids",
+            "daste": "بلوز دخترانه"
+          },
+          {
+            "id": 4,
+            "title": "بلوز یقه اسکی سبز ملورینا Melorina",
+            "image": "/products/children/girls/bolus/cg8822_1_.webp",
+
+            "price": 270000,
+            "createdAt": "2024-11-113T10:10:00Z",
+            "category": "kids",
+            "daste": "بلوز دخترانه"
+          },
+          {
+            "id": 5,
+            "title": "بلوز یقه اسکی شیری ملورینا Melorina",
+            "image": "/products/children/girls/bolus/cg8830_1_.jpg",
+
+            "price": 680000,
+            "createdAt": "2024-11-12T10:10:00Z",
+            "category": "kids",
+            "daste": "بلوز دخترانه"
+          },
+          {
+            "id": 6,
+            "title": "بلوز یقه اسکی کرم ملورینا Melorina",
+            "image": "/products/children/girls/bolus/cg8833_1_.jpg",
+
+            "price": 950000,
+            "createdAt": "2024-11-11T10:10:00Z",
+            "category": "kids",
+            "daste": "بلوز دخترانه"
+          }
+        ],
+        "شلوار و دامن دخترانه": [
+          {
+            "id": 7,
+            "title": "دامن دخترانه چرم مشکی ملورینا Melorina",
+            "image": "/products/children/girls/shalvar/cg3646_1_.webp",
+            "price": 420000,
+            "createdAt": "2024-10-16T10:10:00Z",
+            "category": "kids",
+            "daste": "شلوار و دامن دخترانه"
+          },
+          {
+            "id": 8,
+            "title": "دامن دخترانه طوسی آی چیلک I Cilek کد 34030 -09 مدل پلیسه",
+            "image": "/products/children/girls/shalvar/cg5431_1_.webp",
+            "price": 365000,
+            "createdAt": "2024-12-16T10:10:00Z",
+            "category": "kids",
+            "daste": "شلوار و دامن دخترانه"
+          },
+          {
+            "id": 9,
+            "title": "شلوارک دامنی دخترانه کتان گلدار نارنجی تیتیش Teeteesh کد 16605",
+            "image": "/products/children/girls/shalvar/cg7455_1_.webp",
+            "price": 480000,
+            "createdAt": "2024-12-16T10:10:00Z",
+            "category": "kids",
+            "daste": "شلوار و دامن دخترانه"
+          },
+          {
+            "id": 10,
+            "title": "دامن دخترانه چهارخانه فیورلا Fiorella کد 44516",
+            "image": "/products/children/girls/shalvar/cg8823_1_.webp",
+            "price": 645000,
+            "createdAt": "2024-12-16T10:10:00Z",
+            "category": "kids",
+            "daste": "شلوار و دامن دخترانه"
+          },
+          {
+            "id": 11,
+            "title": "دامن دخترانه چهارخانه فیورلا Fiorella کد 44516",
+            "image": "/products/children/girls/shalvar/ne0548_1_.webp",
+            "price": 290000,
+            "createdAt": "2024-12-16T10:10:00Z",
+            "category": "kids",
+            "daste": "شلوار و دامن دخترانه"
+          },
+          {
+            "id": 12,
+            "title": "دامن دخترانه طوسی روشن فیورلا Fiorella مدل پرنسا کد 44509",
+            "image": "/products/children/girls/shalvar/ne0550_1_.webp",
+            "price": 378000,
+            "createdAt": "2024-12-16T10:10:00Z",
+            "category": "kids",
+            "daste": "شلوار و دامن دخترانه"
+          },
+          {
+            "id": 13,
+            "title": "لگینگ دخترانه مخمل کبریتی قرمز ملورینا Melorina کد 5105",
+            "image": "/products/children/girls/shalvar/ne8045_1_.webp",
+            "price": 500000,
+            "createdAt": "2024-12-16T10:10:00Z",
+            "category": "kids",
+            "daste": "شلوار و دامن دخترانه"
+          }
+        ]
+      },
+      "پسرانه": {
+        "کاپشن پسرانه": [
+          {
+            "id": 1,
+            "title": "کاپشن پسرانه والیانت استایل Valiant Style مدل اسپرت کد K101102",
+            "image": "/products/children/boys/کاپشن پسرانه/at9800_1_.webp",
+            "price": 80000,
+            "createdAt": "2024-12-16T10:10:00Z",
+            "category": "women",
+            "subCategory": "شلوار"
+          },
+          {
+            "id": 2,
+            "title": "کاپشن بچگانه دو رو کلاهدار خردلی مارکا کیدز Marka Kids",
+            "image": "/products/children/boys/کاپشن پسرانه/at9806_1_.webp",
+            "price": 80000,
+            "createdAt": "2024-12-16T10:10:00Z",
+            "category": "women",
+            "subCategory": "شلوار"
+          },
+          {
+            "id": 3,
+            "title": "پافر بچگانه مموری کلاهدار خردلی فشن Fashion",
+            "image": "/products/children/boys/کاپشن پسرانه/au0573_1_.webp",
+            "price": 80000,
+            "createdAt": "2024-12-16T10:10:00Z",
+            "category": "women",
+            "subCategory": "شلوار"
+          },
+          {
+            "id": 4,
+            "title": "کاپشن پسرانه کلاهدار سرمه ای پوکوپیانو POCOPIANO",
+            "image": "/products/children/boys/کاپشن پسرانه/cf7910_1_.webp",
+            "price": 80000,
+            "createdAt": "2024-12-16T10:10:00Z",
+            "category": "women",
+            "subCategory": "شلوار"
+          },
+          {
+            "id": 5,
+            "title": "کاپشن بچگانه دو رو قرمز قهوه ای مارکا کیدز Marka Kids",
+            "image": "/products/children/boys/کاپشن پسرانه/cf7911_1_.webp",
+            "price": 80000,
+            "createdAt": "2024-12-16T10:10:00Z",
+            "category": "women",
+            "subCategory": "شلوار"
+          },
+          {
+            "id": 6,
+            "title": "پافر بچگانه شمعی کلاهدار مشکی فشن Fashion مدل Chuangyi",
+            "image": "/products/children/boys/کاپشن پسرانه/cg6213_1_.webp",
+            "price": 80000,
+            "createdAt": "2024-12-16T10:10:00Z",
+            "category": "women",
+            "subCategory": "شلوار"
+          },
+          {
+            "id": 7,
+            "title": "پافر رویال آبی ملورینا Melorina",
+            "image": "/products/children/boys/کاپشن پسرانه/cg8816_1_.webp",
+            "price": 80000,
+            "createdAt": "2024-12-16T10:10:00Z",
+            "category": "women",
+            "subCategory": "شلوار"
+          }
+        ],
+       "پیراهن پسرانه":[
+        {
+          "id":8,
+          "title":"ست بلوز و شلوارک لنگر سفید آبی ملورینا Melorina",
+          "image":"/products/children/boys/پیراهن پسرانه/836055_main_1.webp"
+        },
+        {
+          "id":9,
+          "title":"ست بلوز و شلوارک پسرانه قایق سفید کرم ملورینا Melorina",
+          "image":"/products/children/boys/پیراهن پسرانه/cf3265_1_.webp"
+        },
+        {
+          "id":10,
+          "title":"ست بلوز و شلوارک پسرانه سبز شکلاتی ملورینا Melorina",
+          "image":"/products/children/boys/پیراهن پسرانه/cg3028_1_-.webp"
+        },
+        {
+          "id":11,
+          "title":"ژیله بچگانه لینن راه راه ملورینا",
+          "image":"/products/children/boys/پیراهن پسرانه/cg3642_1_.webp"
+        },
+        {
+          "id":12,
+          "title":"پیراهن پسرانه لینن شیری تی تیش Teeteesh طرح موز",
+          "image":"/products/children/boys/پیراهن پسرانه/cg3644_1_.webp"
+        }
+       ]
+        
+      }
+    }
+  },
+  "brands": {
+    "زنانه": [
+      {
+        "id": 1,
+        "title": "بلوز و تونیک",
+        "products": [
+          {
+            "id": 1,
+            "title": "بلوز زنانه کوتاه سفید مشکی پرستیژ Prestige",
+            "image": "/products/women/brands/au1383_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-19T08:30:00Z"
+          },
+          {
+            "id": 2,
+            "title": "بلوز زنانه قرمز پرستیژ Prestige",
+            "image": "/products/women/brands/au1388_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-18T14:15:00Z"
+          },
+          {
+            "id": 3,
+            "title": "بلوز زنانه لینن کرم طیفو Teefo",
+            "image": "/products/women/brands/cf3512_1_-.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-20T10:45:00Z"
+          },
+          {
+            "id": 4,
+            "title": "بلوز زنانه قد 75 سفید رویال جین Royal Jeans",
+            "image": "/products/women/brands/au4172_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-19T07:10:00Z"
+          },
+          {
+            "id": 5,
+            "title": "بلوز زنانه لینن بلند لمه کرم مینوس Miinoos مدل سحر",
+            "image": "/products/women/brands/cg0105_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-21T09:50:00Z"
+          },
+          {
+            "id": 6,
+            "title": "بلوز زنانه سبز سین صاد Sin Saad مدل پریا",
+            "image": "/products/women/brands/cg2805_1_ (1).webp",
+            "price": 1278000,
+            "createdAt": "2024-12-17T13:30:00Z"
+          },
+          {
+            "id": 7,
+            "title": "بلوز زنانه کرم الوژ استایل Eloge Style مدل سیو کد ا4w12111108",
+            "image": "/products/women/brands/cg6420_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-20T15:00:00Z"
+          },
+          {
+            "id": 8,
+            "title": "بلوز زنانه شیری تولیکا Tulika کد 32887",
+            "image": "/products/women/brands/cg8281_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-22T10:00:00Z"
+          },
+          {
+            "id": 9,
+            "title": "پیراهن جین مردانه کاغذی",
+            "image": "/products/women/brands/cg8282_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-16T11:20:00Z"
+          },
+          {
+            "id": 10,
+            "title": "پیراهن جین مردانه کاغذی",
+            "image": "/products/women/brands/nb8688_1_-.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-15T09:15:00Z"
+          },
+          {
+            "id": 11,
+            "title": "پیراهن جین مردانه کاغذی",
+            "image": "/products/women/brands/nd4364_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-13T14:10:00Z"
+          },
+          {
+            "id": 12,
+            "title": "پیراهن جین مردانه کاغذی",
+            "image": "/products/women/brands/cg8282_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-14T16:05:00Z"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "تولیکا",
+        "products": [
+          {
+            "id": 1,
+            "title": "پیراهن زنانه قرمز میدی تولیکا Tulika کد 91337",
+            "image": "/products/women/brands/تولیکا/cg8255_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-19T08:30:00Z"
+          },
+          {
+            "id": 2,
+            "title": "ست کت و دامن زنانه سبز تولیکا Tulika کد 41620",
+            "image": "/products/women/brands/تولیکا/cg8260_1_.webp",
+            "price": 1400000,
+            "createdAt": "2024-12-18T14:15:00Z"
+          },
+          {
+            "id": 3,
+            "title": "شلوار زنانه طوسی تولیکا Tulika کد 10696",
+            "image": "/products/women/brands/تولیکا/cg8261_1_.webp",
+            "price": 870000,
+            "createdAt": "2024-12-20T10:45:00Z"
+          },
+          {
+            "id": 4,
+            "title": "ژیله زنانه سفید آجری تولیکا Tulika کد 00982",
+            "image": "/products/women/brands/تولیکا/cg8276_1_.webp",
+            "price": 1700000,
+            "createdAt": "2024-12-19T07:10:00Z"
+          },
+          {
+            "id": 5,
+            "title": "کت زنانه مشکی تولیکا Tulika کد 32924",
+            "image": "/products/women/brands/تولیکا/cg8284_1_.webp",
+            "price": 2300000,
+            "createdAt": "2024-12-21T09:50:00Z"
+          },
+          {
+            "id": 6,
+            "title": "کت زنانه شیری تولیکا Tulika کد 72368",
+            "image": "/products/women/brands/تولیکا/cg8287_1_.webp",
+            "price": 1400000,
+            "createdAt": "2024-12-17T13:30:00Z"
+          },
+          {
+            "id": 7,
+            "title": "پلیور زنانه سرمه ای تولیکا Tulika کد 00989",
+            "image": "/products/women/brands/تولیکا/cg8289_1_.webp",
+            "price": 1100000,
+            "createdAt": "2024-12-20T15:00:00Z"
+          },
+          {
+            "id": 8,
+            "title": "لیور زنانه آجری تولیکا Tulika کد 00986",
+            "image": "/products/women/brands/تولیکا/cg8291_1_-.webp",
+            "price": 900000,
+            "createdAt": "2024-12-22T10:00:00Z"
+          }
+        ]
+      }
+    ],
+    "مردانه": [
+      {
+        "id": 3,
+        "title": "NAFIR WEAR",
+        "products": [
+          {
+            "id": 1,
+            "title": "تیشرت مردانه یقه گرد سرمه ای",
+            "image": "/products/men/brands/Brand NAFIR WEAR/cg3066_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-19T09:00:00Z"
+          },
+          {
+            "id": 2,
+            "title": "شلوار جین مردانه راسته",
+            "image": "/products/children/brands/ادمک/na4606_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-17T11:20:00Z"
+          },
+          {
+            "id": 3,
+            "title": "کت جین مردانه ابی تیره",
+            "image": "/products/men/brands/Brand NAFIR WEAR/cg3529_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-22T12:40:00Z"
+          },
+          {
+            "id": 4,
+            "title": "پیراهن مردانه جین کاغذی",
+            "image": "/products/men/brands/Brand NAFIR WEAR/cg4354_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-16T14:10:00Z"
+          },
+          {
+            "id": 5,
+            "title": "پیراهن مردانه لینن سبز روشن",
+            "image": "/products/men/brands/Brand NAFIR WEAR/cg4359_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-18T10:50:00Z"
+          },
+          {
+            "id": 6,
+            "title": "شلوارک مردانه جین ذغالی",
+            "image": "/products/men/brands/Brand NAFIR WEAR/cg7863_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-21T08:30:00Z"
+          },
+          {
+            "id": 7,
+            "title": "پیراهن مردانه طرح جین چاپی",
+            "image": "/products/men/brands/Brand NAFIR WEAR/cg7871_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-14T13:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Hplus",
+        "products": [
+          {
+            "id": 1,
+            "title": "شلوار مردانه پارچه ای",
+            "image": "/products/men/brands/brand hplus/at6847_1_-.webp",
+            "price": 128000
+          },
+          {
+            "id": 2,
+            "title": "پیراهن مردانه جین کاغذی",
+            "image": "/products/men/brands/brand hplus/au2826_1_.webp",
+            "price": 660000
+          },
+          {
+            "id": 3,
+            "title": "پیراهن مردانه لینن سبز روشن",
+            "image": "/products/men/brands/brand hplus/au2830_1_.webp",
+            "price": 760000
+          },
+          {
+            "id": 4,
+            "title": "شلوارک مردانه جین ذغالی",
+            "image": "/products/men/brands/brand hplus/au2834_1_.webp",
+            "price": 570000
+          },
+          {
+            "id": 5,
+            "title": "پیراهن مردانه طرح جین چاپی",
+            "image": "/products/men/brands/brand hplus/au2834_1_.webp",
+            "price": 760000
+          },
+          {
+            "id": 6,
+            "title": "شلوارک مردانه کتان مشکی",
+            "image": "/products/men/brands/brand hplus/au3579_1_.webp",
+            "price": 450000
+          },
+          {
+            "id": 7,
+            "title": "پیراهن جین مردانه کاغذی ",
+            "image": "/products/men/brands/brand hplus/au3950_1_.webp",
+            "price": 980000
+          }
+        ]
+      }
+    ],
+    "بچه گانه": [
+      {
+        "id": 1,
+        "title": "ادمک",
+        "products": [
+          {
+            "id": 1,
+            "title": "پیراهن سرمه ای",
+            "image": "/products/children/brands/زیپی/cg7718_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-19T09:00:00Z"
+          },
+          {
+            "id": 2,
+            "title": "سرهمی نوزادی مچ دار آدمک Adamak طرح مومو کد 0312500",
+            "image": "/products/children/brands/ادمک/nb0016_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-17T11:20:00Z"
+          },
+          {
+            "id": 3,
+            "title": "بادی پسرانه آستین بلند آبی آدمک Adamak طرح هاوایی",
+            "image": "/products/children/brands/ادمک/nb0035_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-22T12:40:00Z"
+          },
+          {
+            "id": 4,
+            "title": "ست لباس نوزادی 5 تکه صورتی آدمک Adamak مدل پرنیان",
+            "image": "/products/children/brands/ادمک/nb0057_1_-.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-16T14:10:00Z"
+          },
+          {
+            "id": 5,
+            "title": "سرهمی دخترانه شورتی سبز آدمک Adamak طرح طوطی",
+            "image": "/products/children/brands/ادمک/nb0061_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-18T10:50:00Z"
+          },
+          {
+            "id": 6,
+            "title": "کلاه نوزادی گرد آبی آدمک Adamak طرح هاوایی",
+            "image": "/products/children/brands/ادمک/nb0069_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-21T08:30:00Z"
+          },
+          {
+            "id": 7,
+            "title": "بادی پسرانه جودون آستین کوتاه سرمه ای آدمک Adamak کد 170022",
+            "image": "/products/children/brands/ادمک/nb2919_1_.webp",
+            "price": 1278000,
+            "createdAt": "2024-12-14T13:00:00Z"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "زیپی",
+        "products": [
+          {
+            "id": 1,
+            "title": "سویشرت جلو بسته پسرانه زرد زیپی هومنیتی Whomanity مدل 31032880042",
+            "image": "/products/children/brands/زیپی/cg7718_1_.webp",
+            "price": 127800,
+            "createdAt": "2024-12-19T09:00:00Z"
+          },
+          {
+            "id": 2,
+            "title": "سویشرت جلوبسته دخترانه",
+            "image": "/products/children/brands/زیپی/cg7719_1_.webp",
+            "price": 260000,
+            "createdAt": "2024-10-17T11:20:00Z"
+          },
+          {
+            "id": 3,
+            "title": "دمپایی گل گلی دخترانه ",
+            "image": "/products/children/brands/زیپی/cg7727_1_.webp",
+            "price": 120000,
+            "createdAt": "2024-12-22T12:40:00Z"
+          },
+          {
+            "id": 4,
+            "title": "کلاه نقاب دار مشکی ",
+            "image": "/products/children/brands/زیپی/cg7733_1_.webp",
+            "price": 90000,
+            "createdAt": "2024-12-16T14:10:00Z"
+          },
+          {
+            "id": 5,
+            "title": "کلاه صورتی بچگانه",
+            "image": "/products/children/brands/زیپی/cg7734_1_.webp",
+            "price": 170000,
+            "createdAt": "2024-12-18T10:50:00Z"
+          },
+          {
+            "id": 6,
+            "title": "کاپشن سرمه ای انگلیسی",
+            "image": "/products/children/brands/زیپی/cg7747_1_.webp",
+            "price": 740000,
+            "createdAt": "2024-12-21T08:30:00Z"
+          },
+          {
+            "id": 7,
+            "title": "تیشرت جلبسته زرد",
+            "image": "/products/children/brands/زیپی/cg7748_1_.webp",
+            "price": 300000,
+            "createdAt": "2024-12-14T13:00:00Z"
+          }
+        ]
+      }
+    ]
+  },
+  "discount": {
+    "مردانه": [
+      {
+        "id": 1,
+        "image": "/products/men/discount/Men_Landing01-Tile_01.webp"
+      },
+      {
+        "id": 2,
+        "image": "/products/men/discount/Men_Landing01-Tile_02.webp"
+      },
+      {
+        "id": 3,
+        "image": "/products/men/discount/Men_Landing01-Tile_03.webp"
+      }
+    ],
+    "زنانه": [
+      {
+        "id": 1,
+        "image": "/products/women/discount/file_10.webp",
+        "createdAt": "2024-12-12T09:00:00Z"
+      },
+      {
+        "id": 2,
+        "image": "/products/women/discount/file_11.webp",
+        "createdAt": "2024-12-13T10:00:00Z"
+      },
+      {
+        "id": 3,
+        "image": "/products/women/discount/file_9.webp",
+        "createdAt": "2024-12-14T11:30:00Z"
+      }
+    ],
+    "main": [
+      {
+        "id": 1,
+        "image": "/products/main/_01-Desktop.webp",
+        "createdAt": "2024-12-12T09:00:00Z"
+      },
+      {
+        "id": 2,
+        "image": "/products/main/_Tile_02.webp",
+        "createdAt": "2024-12-12T09:00:00Z"
+      },
+      {
+        "id": 3,
+        "image": "/products/main/_Tile_03.webp",
+        "createdAt": "2024-12-12T09:00:00Z"
+      }
+    ],
+    "بچه گانه": [
+      {
+        "id": 1,
+        "image": "/products/children/discount/Kids01-Tile_01.webp",
+        "createdAt": "2024-12-12T09:00:00Z"
+      },
+      {
+        "id": 2,
+        "image": "/products/children/discount/Kids01-Tile_02.webp",
+        "createdAt": "2024-11-12T09:00:00Z"
+      },
+      {
+        "id": 3,
+        "image": "/products/children/discount/Kids01-Tile_03.webp",
+        "createdAt": "2024-10-12T09:00:00Z"
+      }
+    ]
+  },
+  "BestSellingBrands": [
+    {
+      "id": 1,
+      "star": 4,
+      "logo": "/products/men/brandsLogo/balloon.webp",
+      "starImage": "/products/men/brandsLogo/star/sta5.svg"
+    },
+    {
+      "id": 2,
+      "star": 4.5,
+      "logo": "/products/men/brandsLogo/Corum-logo-1.webp",
+      "starImage": "/products/men/brandsLogo/star/sta5.svg"
+    },
+    {
+      "id": 3,
+      "star": 5,
+      "logo": "/products/men/brandsLogo/DIVERSO.webp",
+      "starImage": "/products/men/brandsLogo/star/sta5.svg"
+    },
+    {
+      "id": 4,
+      "star": 4.5,
+      "logo": "/products/men/brandsLogo/JPA.webp",
+      "starImage": "/products/men/brandsLogo/star/sta5.svg"
+    },
+    {
+      "id": 5,
+      "star": 5,
+      "logo": "/products/men/brandsLogo/kook.webp",
+      "starImage": "/products/men/brandsLogo/star/sta5.svg"
+    }
+  ],
+  "blog": {
+    "blogCategoryImages": [
+      {
+        "id": 1,
+        "title": " مد واستایل آقایان",
+        "image": "/magazine/blog/category/Men.jpg"
+      },
+      {
+        "id": 2,
+        "title": " مد و استایل خانم ها ",
+        "image": "/magazine/blog/category/Women.jpg"
+      },
+      {
+        "id": 3,
+        "title": "مد و استایل کودکانه ",
+        "image": "/magazine/blog/category/Boy-style-on-Nowruz-Eid-shakhes.jpg"
+      },
+      {
+        "id": 4,
+        "title": "  استایل سلبریتی ها",
+        "image": "/magazine/blog/category/hellozurich-lieblingsort-alex-shoes-01.jpg"
+      },
+      {
+        "id": 5,
+        "title": "استایل ترند",
+        "image": "/magazine/blog/category/The-best-watch-brand.jpg"
+      },
+      {
+        "id": 6,
+        "title": " مراقبت و نگهداری لباس",
+        "image": "/magazine/blog/category/پیراهن-هاوایی.jpg"
+      }
+    ],
+    "blogImages": {
+      "main": [
+        {
+          "id": 1,
+          "image": "/magazine/blog/main/5.webp"
+        },
+        {
+          "id": 2,
+          "image": "/magazine/blog/main/father-day-gift.png"
+        },
+        {
+          "id": 3,
+          "image": "/magazine/blog/main/Moroccan-Caftan-Summer-2022-Maxi-Dress-for-Women-Arab-Dubai-Gold-Tape-Trim-O-Neck-Short-1030x773.png"
+        },
+        {
+          "id": 4,
+          "image": "/magazine/blog/main/pants-men1-1030x687.jpg"
+        }
+      ],
+      "men": [
+        {
+          "id": 1,
+          "image": "/magazine/blog/men/Difference-between-puffer-trench-coat-vest-overcoat-and-jacket-shakhes.jpg"
+        },
+        {
+          "id": 2,
+          "image": "/magazine/blog/men/men-jacketi-cover-min.jpg"
+        },
+        {
+          "id": 3,
+          "image": "/magazine/blog/men/pants-men1.jpg"
+        },
+        {
+          "id": 4,
+          "image": "/magazine/blog/men/پیراهن-هاوایی.jpg"
+        }
+      ],
+      "women": [
+        {
+          "id": 1,
+          "image": "/magazine/blog/women/omen-pants.jpg"
+        },
+        {
+          "id": 2,
+          "image": "/magazine/blog/women/converse-all-star-1030x579.jpg"
+        },
+        {
+          "id": 3,
+          "image": "/magazine/blog/women/0eae583b017bcf45f3e8610868e53a25-580x1030.jpg"
+        },
+        {
+          "id": 4,
+          "image": "/magazine/blog/women/f2be82b1e898c5e79459899b7efda672-643x1030.jpg"
+        }
+      ],
+      "children": [
+        {
+          "id": 1,
+          "image": "/magazine/blog/children/baby-girl-autumn-style-min-1030x773.jpg"
+        },
+        {
+          "id": 2,
+          "image": "/magazine/blog/children/Boy-style-on-Nowruz-Eid-shakhes-1030x773.jpg"
+        },
+        {
+          "id": 3,
+          "image": "/magazine/blog/children/Girl_s-style-at-Eid-Nowruz-shakhes-1030x773.jpg"
+        },
+        {
+          "id": 4,
+          "image": "/magazine/blog/children/عکس-اصلی-1030x773.jpg"
+        }
+      ]
+    },
+    "blogArticles": {
+      "men": [
+        {
+          "id": 1,
+          "title": "انواع کاپشن مردانه مدل 2025",
+          "description": "کاپشن مردانه از جمله آیتم‌های ضروری کمد برای فصول سرد است. کاپشن یک کالای کاربردی است که علاوه بر گرما بخشیدن به بدن، می تواند باعث جذاب شدن استایل نیز شود. هر سال با شروع فصل سرد، کاپشن های جدید رونمایی می شوند که هر یک زیبایی و ویژگی های خود را دارد. برای زمستان 2025 نیز کاپشن های متنوعی وارد بازار شده اند که در این مقاله 10 مدل کاپشن جدید مردانه را بررسی و مقایسه می کنیم. کاپشن مردانه کلاهدار ضد آب دیورسو Diverso کاپشن مردانه دیورسو انتخابی ایده‌آل برای آقایانی است که به دنبال ترکیبی از استایل، راحتی و کارایی در فصول سرد هستند. این کاپشن از جنس برزنت مقاوم و ضدباد تولید شده که علاوه بر محافظت در برابر سرما، احساس راحتی نیز ایجاد می کند. جیب‌های کاربردی و فضای کافی برای نگهداری وسایل ضروری مثل گوشی یا کلیدها، از دیگر ویژگی‌های این محصول است. طراحی کاپوت دار و زیپ مقاوم، آن را برای روزهای بارانی یا برفی نیز مناسب کرده است. برای یک استایل کژوال و زمستانی جذاب، این کاپشن را با یک شلوار جین تیره یا شلوار کتان خاکی ست کنید. زیر کاپشن، یک پلیور یا هودی با رنگ خنثی مثل خاکستری یا مشکی انتخاب کنید تا هماهنگی بیشتری در استایل ایجاد شود.",
+          "image": "/magazine/blog/article/men/men-jacketi-cover-min.jpg"
+        },
+        {
+          "id": 2,
+          "title": "پیراهن هاوایی مردانه",
+          "description": "کاپشن مردانه از جمله آیتم‌های ضروری کمد برای فصول سرد است. کاپشن یک کالای کاربردی است که علاوه بر گرما بخشیدن به بدن، می تواند باعث جذاب شدن استایل نیز شود. هر سال با شروع فصل سرد، کاپشن های جدید رونمایی می شوند که هر یک زیبایی و ویژگی های خود را دارد. برای زمستان 2025 نیز کاپشن های متنوعی وارد بازار شده اند که در این مقاله 10 مدل کاپشن جدید مردانه را بررسی و مقایسه می کنیم. کاپشن مردانه کلاهدار ضد آب دیورسو Diverso کاپشن مردانه دیورسو انتخابی ایده‌آل برای آقایانی است که به دنبال ترکیبی از استایل، راحتی و کارایی در فصول سرد هستند. این کاپشن از جنس برزنت مقاوم و ضدباد تولید شده که علاوه بر محافظت در برابر سرما، احساس راحتی نیز ایجاد می کند. جیب‌های کاربردی و فضای کافی برای نگهداری وسایل ضروری مثل گوشی یا کلیدها، از دیگر ویژگی‌های این محصول است. طراحی کاپوت دار و زیپ مقاوم، آن را برای روزهای بارانی یا برفی نیز مناسب کرده است. برای یک استایل کژوال و زمستانی جذاب، این کاپشن را با یک شلوار جین تیره یا شلوار کتان خاکی ست کنید. زیر کاپشن، یک پلیور یا هودی با رنگ خنثی مثل خاکستری یا مشکی انتخاب کنید تا هماهنگی بیشتری در استایل ایجاد شود.",
+          "image": "/magazine/blog/article/men/پوشت2-1030x773.jpg"
+        },
+        {
+          "id": 3,
+          "title": "نواع مدل کاپشن مردانه 2024",
+          "description": "کاپشن مردانه از جمله آیتم‌های ضروری کمد برای فصول سرد است. کاپشن یک کالای کاربردی است که علاوه بر گرما بخشیدن به بدن، می تواند باعث جذاب شدن استایل نیز شود. هر سال با شروع فصل سرد، کاپشن های جدید رونمایی می شوند که هر یک زیبایی و ویژگی های خود را دارد. برای زمستان 2025 نیز کاپشن های متنوعی وارد بازار شده اند که در این مقاله 10 مدل کاپشن جدید مردانه را بررسی و مقایسه می کنیم. کاپشن مردانه کلاهدار ضد آب دیورسو Diverso کاپشن مردانه دیورسو انتخابی ایده‌آل برای آقایانی است که به دنبال ترکیبی از استایل، راحتی و کارایی در فصول سرد هستند. این کاپشن از جنس برزنت مقاوم و ضدباد تولید شده که علاوه بر محافظت در برابر سرما، احساس راحتی نیز ایجاد می کند. جیب‌های کاربردی و فضای کافی برای نگهداری وسایل ضروری مثل گوشی یا کلیدها، از دیگر ویژگی‌های این محصول است. طراحی کاپوت دار و زیپ مقاوم، آن را برای روزهای بارانی یا برفی نیز مناسب کرده است. برای یک استایل کژوال و زمستانی جذاب، این کاپشن را با یک شلوار جین تیره یا شلوار کتان خاکی ست کنید. زیر کاپشن، یک پلیور یا هودی با رنگ خنثی مثل خاکستری یا مشکی انتخاب کنید تا هماهنگی بیشتری در استایل ایجاد شود.",
+          "image": "/magazine/blog/article/men/پیراهن-هاوایی-1030x773.jpg"
+        }
+      ],
+      "women": [
+        {
+          "id": 4,
+          "title": "راهنمای خرید مانتو و نحوه استایل آن",
+          "description": "کاپشن مردانه از جمله آیتم‌های ضروری کمد برای فصول سرد است. کاپشن یک کالای کاربردی است که علاوه بر گرما بخشیدن به بدن، می تواند باعث جذاب شدن استایل نیز شود. هر سال با شروع فصل سرد، کاپشن های جدید رونمایی می شوند که هر یک زیبایی و ویژگی های خود را دارد. برای زمستان 2025 نیز کاپشن های متنوعی وارد بازار شده اند که در این مقاله 10 مدل کاپشن جدید مردانه را بررسی و مقایسه می کنیم. کاپشن مردانه کلاهدار ضد آب دیورسو Diverso کاپشن مردانه دیورسو انتخابی ایده‌آل برای آقایانی است که به دنبال ترکیبی از استایل، راحتی و کارایی در فصول سرد هستند. این کاپشن از جنس برزنت مقاوم و ضدباد تولید شده که علاوه بر محافظت در برابر سرما، احساس راحتی نیز ایجاد می کند. جیب‌های کاربردی و فضای کافی برای نگهداری وسایل ضروری مثل گوشی یا کلیدها، از دیگر ویژگی‌های این محصول است. طراحی کاپوت دار و زیپ مقاوم، آن را برای روزهای بارانی یا برفی نیز مناسب کرده است. برای یک استایل کژوال و زمستانی جذاب، این کاپشن را با یک شلوار جین تیره یا شلوار کتان خاکی ست کنید. زیر کاپشن، یک پلیور یا هودی با رنگ خنثی مثل خاکستری یا مشکی انتخاب کنید تا هماهنگی بیشتری در استایل ایجاد شود.",
+          "image": "/magazine/blog/article/women/LebasKhab-Com-L0075-4-1030x773.jpg"
+        },
+        {
+          "id": 5,
+          "title": "25 مدل از زیباترین مدل های مانتو مخمل زنانه",
+          "description": "کاپشن مردانه از جمله آیتم‌های ضروری کمد برای فصول سرد است. کاپشن یک کالای کاربردی است که علاوه بر گرما بخشیدن به بدن، می تواند باعث جذاب شدن استایل نیز شود. هر سال با شروع فصل سرد، کاپشن های جدید رونمایی می شوند که هر یک زیبایی و ویژگی های خود را دارد. برای زمستان 2025 نیز کاپشن های متنوعی وارد بازار شده اند که در این مقاله 10 مدل کاپشن جدید مردانه را بررسی و مقایسه می کنیم. کاپشن مردانه کلاهدار ضد آب دیورسو Diverso کاپشن مردانه دیورسو انتخابی ایده‌آل برای آقایانی است که به دنبال ترکیبی از استایل، راحتی و کارایی در فصول سرد هستند. این کاپشن از جنس برزنت مقاوم و ضدباد تولید شده که علاوه بر محافظت در برابر سرما، احساس راحتی نیز ایجاد می کند. جیب‌های کاربردی و فضای کافی برای نگهداری وسایل ضروری مثل گوشی یا کلیدها، از دیگر ویژگی‌های این محصول است. طراحی کاپوت دار و زیپ مقاوم، آن را برای روزهای بارانی یا برفی نیز مناسب کرده است. برای یک استایل کژوال و زمستانی جذاب، این کاپشن را با یک شلوار جین تیره یا شلوار کتان خاکی ست کنید. زیر کاپشن، یک پلیور یا هودی با رنگ خنثی مثل خاکستری یا مشکی انتخاب کنید تا هماهنگی بیشتری در استایل ایجاد شود.",
+          "image": "/magazine/blog/article/women/Manto-Pant11.jpg"
+        },
+        {
+          "id": 6,
+          "title": " لباس زیر کاستوم چیست؟",
+          "description": "کاپشن مردانه از جمله آیتم‌های ضروری کمد برای فصول سرد است. کاپشن یک کالای کاربردی است که علاوه بر گرما بخشیدن به بدن، می تواند باعث جذاب شدن استایل نیز شود. هر سال با شروع فصل سرد، کاپشن های جدید رونمایی می شوند که هر یک زیبایی و ویژگی های خود را دارد. برای زمستان 2025 نیز کاپشن های متنوعی وارد بازار شده اند که در این مقاله 10 مدل کاپشن جدید مردانه را بررسی و مقایسه می کنیم. کاپشن مردانه کلاهدار ضد آب دیورسو Diverso کاپشن مردانه دیورسو انتخابی ایده‌آل برای آقایانی است که به دنبال ترکیبی از استایل، راحتی و کارایی در فصول سرد هستند. این کاپشن از جنس برزنت مقاوم و ضدباد تولید شده که علاوه بر محافظت در برابر سرما، احساس راحتی نیز ایجاد می کند. جیب‌های کاربردی و فضای کافی برای نگهداری وسایل ضروری مثل گوشی یا کلیدها، از دیگر ویژگی‌های این محصول است. طراحی کاپوت دار و زیپ مقاوم، آن را برای روزهای بارانی یا برفی نیز مناسب کرده است. برای یک استایل کژوال و زمستانی جذاب، این کاپشن را با یک شلوار جین تیره یا شلوار کتان خاکی ست کنید. زیر کاپشن، یک پلیور یا هودی با رنگ خنثی مثل خاکستری یا مشکی انتخاب کنید تا هماهنگی بیشتری در استایل ایجاد شود.",
+          "image": "/magazine/blog/article/women/LebasKhab-Com-L0075-4-300x225.jpg"
+        },
+        {
+          "id": 7,
+          "title": " 20 مدل مانتو کیمونو",
+          "description": "کاپشن مردانه از جمله آیتم‌های ضروری کمد برای فصول سرد است. کاپشن یک کالای کاربردی است که علاوه بر گرما بخشیدن به بدن، می تواند باعث جذاب شدن استایل نیز شود. هر سال با شروع فصل سرد، کاپشن های جدید رونمایی می شوند که هر یک زیبایی و ویژگی های خود را دارد. برای زمستان 2025 نیز کاپشن های متنوعی وارد بازار شده اند که در این مقاله 10 مدل کاپشن جدید مردانه را بررسی و مقایسه می کنیم. کاپشن مردانه کلاهدار ضد آب دیورسو Diverso کاپشن مردانه دیورسو انتخابی ایده‌آل برای آقایانی است که به دنبال ترکیبی از استایل، راحتی و کارایی در فصول سرد هستند. این کاپشن از جنس برزنت مقاوم و ضدباد تولید شده که علاوه بر محافظت در برابر سرما، احساس راحتی نیز ایجاد می کند. جیب‌های کاربردی و فضای کافی برای نگهداری وسایل ضروری مثل گوشی یا کلیدها، از دیگر ویژگی‌های این محصول است. طراحی کاپوت دار و زیپ مقاوم، آن را برای روزهای بارانی یا برفی نیز مناسب کرده است. برای یک استایل کژوال و زمستانی جذاب، این کاپشن را با یک شلوار جین تیره یا شلوار کتان خاکی ست کنید. زیر کاپشن، یک پلیور یا هودی با رنگ خنثی مثل خاکستری یا مشکی انتخاب کنید تا هماهنگی بیشتری در استایل ایجاد شود.",
+          "image": "/magazine/blog/article/women/مانتو-مجلسی-لاکچری-سلطنتی-بلند-خاص-مخمل-نخ-ابریشم-تور-ترک-خرجکار-دستدوز-1030x773.jpg"
+        }
+      ],
+      "children": [
+        {
+          "id": 1,
+          "title": "داشتن استایلی جذاب به سبک Color Blocking با ۶ روش ساده",
+          "description": "کاپشن مردانه از جمله آیتم‌های ضروری کمد برای فصول سرد است. کاپشن یک کالای کاربردی است که علاوه بر گرما بخشیدن به بدن، می تواند باعث جذاب شدن استایل نیز شود. هر سال با شروع فصل سرد، کاپشن های جدید رونمایی می شوند که هر یک زیبایی و ویژگی های خود را دارد. برای زمستان 2025 نیز کاپشن های متنوعی وارد بازار شده اند که در این مقاله 10 مدل کاپشن جدید مردانه را بررسی و مقایسه می کنیم. کاپشن مردانه کلاهدار ضد آب دیورسو Diverso کاپشن مردانه دیورسو انتخابی ایده‌آل برای آقایانی است که به دنبال ترکیبی از استایل، راحتی و کارایی در فصول سرد هستند. این کاپشن از جنس برزنت مقاوم و ضدباد تولید شده که علاوه بر محافظت در برابر سرما، احساس راحتی نیز ایجاد می کند. جیب‌های کاربردی و فضای کافی برای نگهداری وسایل ضروری مثل گوشی یا کلیدها، از دیگر ویژگی‌های این محصول است. طراحی کاپوت دار و زیپ مقاوم، آن را برای روزهای بارانی یا برفی نیز مناسب کرده است. برای یک استایل کژوال و زمستانی جذاب، این کاپشن را با یک شلوار جین تیره یا شلوار کتان خاکی ست کنید. زیر کاپشن، یک پلیور یا هودی با رنگ خنثی مثل خاکستری یا مشکی انتخاب کنید تا هماهنگی بیشتری در استایل ایجاد شود.",
+          "image": "/magazine/blog/article/children/sha-1030x773.jpg"
+        },
+        {
+          "id": 2,
+          "title": "راهنمای خرید کفش بچه گانه و چند نکته طلایی برای والدین",
+          "description": "کاپشن مردانه از جمله آیتم‌های ضروری کمد برای فصول سرد است. کاپشن یک کالای کاربردی است که علاوه بر گرما بخشیدن به بدن، می تواند باعث جذاب شدن استایل نیز شود. هر سال با شروع فصل سرد، کاپشن های جدید رونمایی می شوند که هر یک زیبایی و ویژگی های خود را دارد. برای زمستان 2025 نیز کاپشن های متنوعی وارد بازار شده اند که در این مقاله 10 مدل کاپشن جدید مردانه را بررسی و مقایسه می کنیم. کاپشن مردانه کلاهدار ضد آب دیورسو Diverso کاپشن مردانه دیورسو انتخابی ایده‌آل برای آقایانی است که به دنبال ترکیبی از استایل، راحتی و کارایی در فصول سرد هستند. این کاپشن از جنس برزنت مقاوم و ضدباد تولید شده که علاوه بر محافظت در برابر سرما، احساس راحتی نیز ایجاد می کند. جیب‌های کاربردی و فضای کافی برای نگهداری وسایل ضروری مثل گوشی یا کلیدها، از دیگر ویژگی‌های این محصول است. طراحی کاپوت دار و زیپ مقاوم، آن را برای روزهای بارانی یا برفی نیز مناسب کرده است. برای یک استایل کژوال و زمستانی جذاب، این کاپشن را با یک شلوار جین تیره یا شلوار کتان خاکی ست کنید. زیر کاپشن، یک پلیور یا هودی با رنگ خنثی مثل خاکستری یا مشکی انتخاب کنید تا هماهنگی بیشتری در استایل ایجاد شود.",
+          "image": "/magazine/blog/article/children/Guide-to-buying-childrens-shoes.jpeg"
+        },
+        {
+          "id": 3,
+          "title": "26 استایل و مدل لباس پسرانه مخصوص عید نوروز",
+          "description": "کاپشن مردانه از جمله آیتم‌های ضروری کمد برای فصول سرد است. کاپشن یک کالای کاربردی است که علاوه بر گرما بخشیدن به بدن، می تواند باعث جذاب شدن استایل نیز شود. هر سال با شروع فصل سرد، کاپشن های جدید رونمایی می شوند که هر یک زیبایی و ویژگی های خود را دارد. برای زمستان 2025 نیز کاپشن های متنوعی وارد بازار شده اند که در این مقاله 10 مدل کاپشن جدید مردانه را بررسی و مقایسه می کنیم. کاپشن مردانه کلاهدار ضد آب دیورسو Diverso کاپشن مردانه دیورسو انتخابی ایده‌آل برای آقایانی است که به دنبال ترکیبی از استایل، راحتی و کارایی در فصول سرد هستند. این کاپشن از جنس برزنت مقاوم و ضدباد تولید شده که علاوه بر محافظت در برابر سرما، احساس راحتی نیز ایجاد می کند. جیب‌های کاربردی و فضای کافی برای نگهداری وسایل ضروری مثل گوشی یا کلیدها، از دیگر ویژگی‌های این محصول است. طراحی کاپوت دار و زیپ مقاوم، آن را برای روزهای بارانی یا برفی نیز مناسب کرده است. برای یک استایل کژوال و زمستانی جذاب، این کاپشن را با یک شلوار جین تیره یا شلوار کتان خاکی ست کنید. زیر کاپشن، یک پلیور یا هودی با رنگ خنثی مثل خاکستری یا مشکی انتخاب کنید تا هماهنگی بیشتری در استایل ایجاد شود.",
+          "image": "/magazine/blog/article/children/Boy-style-on-Nowruz-Eid-shakhes-1030x773.jpg"
+        },
+        {
+          "id": 4,
+          "title": "25 استایل و مدل لباس دخترانه مخصوص عید نوروز",
+          "description": "کاپشن مردانه از جمله آیتم‌های ضروری کمد برای فصول سرد است. کاپشن یک کالای کاربردی است که علاوه بر گرما بخشیدن به بدن، می تواند باعث جذاب شدن استایل نیز شود. هر سال با شروع فصل سرد، کاپشن های جدید رونمایی می شوند که هر یک زیبایی و ویژگی های خود را دارد. برای زمستان 2025 نیز کاپشن های متنوعی وارد بازار شده اند که در این مقاله 10 مدل کاپشن جدید مردانه را بررسی و مقایسه می کنیم. کاپشن مردانه کلاهدار ضد آب دیورسو Diverso کاپشن مردانه دیورسو انتخابی ایده‌آل برای آقایانی است که به دنبال ترکیبی از استایل، راحتی و کارایی در فصول سرد هستند. این کاپشن از جنس برزنت مقاوم و ضدباد تولید شده که علاوه بر محافظت در برابر سرما، احساس راحتی نیز ایجاد می کند. جیب‌های کاربردی و فضای کافی برای نگهداری وسایل ضروری مثل گوشی یا کلیدها، از دیگر ویژگی‌های این محصول است. طراحی کاپوت دار و زیپ مقاوم، آن را برای روزهای بارانی یا برفی نیز مناسب کرده است. برای یک استایل کژوال و زمستانی جذاب، این کاپشن را با یک شلوار جین تیره یا شلوار کتان خاکی ست کنید. زیر کاپشن، یک پلیور یا هودی با رنگ خنثی مثل خاکستری یا مشکی انتخاب کنید تا هماهنگی بیشتری در استایل ایجاد شود.",
+          "image": "/magazine/blog/article/children/Girl_s-style-at-Eid-Nowruz-shakhes-1030x773.jpg"
+        }
+      ]
+    }
+  },
+  "users": [
+    {
+      "id": "1",
+      "username": "amin",
+      "password": "123456",
+      "email": "amin@poor.com"
+    },
+    {
+      "id": "08e2",
+      "userName": "amin12",
+      "email": "amin.poor@gmail.com",
+      "password": "amin0000"
+    },
+    {
+      "id": "a21b",
+      "userName": "mosi",
+      "email": "mosi@gmail.com",
+      "password": "123456"
+    }
+  ]
+}

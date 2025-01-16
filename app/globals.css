@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "lincoln";
+  src: url("../public/fonts/AbrahamLincoln.ttf") format("ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "vazir";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../public/fonts/vazir/Vazir-Thin-FD-WOL.woff2") format("woff2");
+}
+@font-face {
+  font-family: "vazir";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../public/fonts/vazir/Vazir-Light-FD-WOL.woff2") format("woff2");
+}
+@font-face {
+  font-family: "vazir";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../public/fonts/vazir/Vazir-Medium-FD-WOL.woff2") format("woff2");
+}
+@font-face{
+  font-family: "vazir";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../public/fonts/vazir/Vazir-Bold-FD-WOL.woff2") format("woff2");
+}
+
+html {
+  @apply font-vazir font-thin;
+}
+
+/* men Page */
+.clip-path {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 8px), 0 100%);
+}
+
+/* men Page */
