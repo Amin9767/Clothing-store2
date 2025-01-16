@@ -63,13 +63,13 @@ export default function ProductsPageComponent({
     (sortType: string) => {
       const sorted = [...sortedProducts];
       switch (sortType) {
-        case "new":
-          sorted.sort((a, b) => {
-            const dateA = new Date(a.createdAt);
-            const dateB = new Date(b.createdAt);
-            return dateB.getTime() - dateA.getTime();
-          });
-          break;
+        // case "new":
+        //   sorted.sort((a, b) => {
+        //     const dateA = new Date(a.createdAt);
+        //     const dateB = new Date(b.createdAt);
+        //     return dateB.getTime() - dateA.getTime();
+        //   });
+        //   break;
         case "price":
           sorted.sort((a, b) => b.price - a.price);
           break;

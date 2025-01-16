@@ -30,7 +30,11 @@ export default function CategoryComponent({
   console.log(categoryParams);
   const params = useParams();
   // // console.log(params);
-  const getCat = params?.category ? decodeURIComponent(params.category) : "";
+  const getCat = params?.category
+    ? decodeURIComponent(
+        Array.isArray(params.category) ? params.category[0] : params.category
+      )
+    : "";
   console.log(getCat);
   const getSubParams1 = decodeURIComponent(
     Array.isArray(params.subCategory1)
