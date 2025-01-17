@@ -162,24 +162,24 @@ export default function Navbar() {
                   </div>
                 </li>
                 <li className="relative group">
-                  <Link href="/store/kids" className="hover:text-pink-500">
+                  <Link href="/store/بچه گانه" className="hover:text-pink-500">
                     بچگانه
                   </Link>
                   <div className="absolute w-72  hidden group-hover:flex gap-8 space-x-4 bg-white shadow-lg z-20 p-2">
                     <div className="flex flex-col ">
                       <Link
-                        href="/store/kids/پسرانه"
+                        href="/store/بچه گانهis/پسرانه"
                         className=" hover:bg-pink-500 px-4 rounded-md "
                       >
                         پسرانه
                       </Link>
                       <ul className="mt-4 flex flex-col gap-4">
-                        <Link href="/store/kids/boys/کاپشن">
+                        <Link href="/store/بچه گانهis/boys/کاپشن">
                           <li className="bg-sky-100 hover:bg-pink-500 px-4 rounded-md font-thin">
                             کاپشن
                           </li>
                         </Link>
-                        <Link href="/store/kids/boys/شلوار">
+                        <Link href="/store/بچه گانهis/boys/شلوار">
                           <li className="bg-sky-100 hover:bg-pink-500 px-4 rounded-md font-thin">
                             شلوار
                           </li>
@@ -188,18 +188,18 @@ export default function Navbar() {
                     </div>
                     <div className="flex flex-col">
                       <Link
-                        href="/store/kids/girls"
+                        href="/store/بچه گانهis/girls"
                         className="hover:bg-pink-500 px-4  rounded-md "
                       >
                         دخترانه
                       </Link>
                       <ul className="mt-4 flex flex-col gap-4">
-                        <Link href="/store/kids/girls/بلوز دخترانه">
+                        <Link href="/store/بچه گانهis/girls/بلوز دخترانه">
                           <li className="bg-sky-100 hover:bg-pink-500 px-4 rounded-md font-thin">
                             بلوز دخترانه
                           </li>
                         </Link>
-                        <Link href="/store/kids/girls/شلوار و دامن دخترانه">
+                        <Link href="/store/بچه گانهis/girls/شلوار و دامن دخترانه">
                           <li className="bg-sky-100 hover:bg-pink-500 px-4 rounded-md font-thin w-full">
                             شلوار و دامن دخترانه
                           </li>

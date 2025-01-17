@@ -2,7 +2,8 @@ import axios from "axios";
 import { IUser } from "../serverTypes/serverTypes";
 
 const client = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL:
+    "https://clothing-strore-db-default-rtdb.asia-southeast1.firebasedatabase.app/",
   timeout: 5000,
   headers: {
     "Content-Type": "application/json",
@@ -13,10 +14,10 @@ export const getSlider = async () => {
   try {
     const { data } = await client({
       method: "GET",
-      url: `/db.json`,
+      url: `/swiper.json`,
     });
-    console.log(data.swiper);
-    return data.swiper;
+    console.log(data);
+    return data;
   } catch (error) {
     console.log(error);
   }
@@ -25,10 +26,10 @@ export const getCategoryList = async () => {
   try {
     const { data } = await client({
       method: "GET",
-      url: `/db.json`,
+      url: `/category.json`,
     });
-    console.log(data.category);
-    return data.category;
+    console.log(data);
+    return data;
   } catch (error) {
     console.log(error);
   }
@@ -37,10 +38,10 @@ export const getBrands = async () => {
   try {
     const { data } = await client({
       method: "GET",
-      url: `/db.json`,
+      url: `/brands.json`,
     });
-    console.log(data.brands);
-    return data.brands;
+    console.log(data);
+    return data;
   } catch (error) {
     console.log(error);
   }
@@ -49,10 +50,10 @@ export const getDiscount = async () => {
   try {
     const { data } = await client({
       method: "GET",
-      url: `/db.json`,
+      url: `/discount.json`,
     });
-    console.log(data.discount);
-    return data.discount;
+    console.log(data);
+    return data;
   } catch (error) {
     console.log(error);
   }
@@ -61,9 +62,9 @@ export const getProducts = async () => {
   try {
     const { data } = await client({
       method: "GET",
-      url: `/db.json`,
+      url: `/products.json`,
     });
-    return data.products;
+    return data;
   } catch (error) {
     console.log(error);
   }
@@ -72,9 +73,9 @@ export const getBestSellingBrand = async () => {
   try {
     const { data } = await client({
       method: "GET",
-      url: `/db.json`,
+      url: `/BestSellingBrands.json`,
     });
-    return data.BestSellingBrands;
+    return data;
   } catch (error) {
     console.log(error);
   }
@@ -84,12 +85,12 @@ export const checkEmailExist = async (email: string) => {
   try {
     const { data } = await client({
       method: "GET",
-      url: `/db.json`,
+      url: `/users.json`,
     });
-    console.log("Fetched users:", data.users);
+    console.log("Fetched users:", data);
 
-    if (!data.users || !Array.isArray(data.users)) {
-      console.error("API returned invalid data:", data.users);
+    if (!data || !Array.isArray(data)) {
+      console.error("API returned invalid data:", data);
       return [];
     }
 
@@ -112,18 +113,18 @@ export const register = async (
   try {
     const { data } = await client({
       method: "POST",
-      url: "/db.json",
+      url: "/users.json",
       data: {
         userName,
         email,
         password,
       },
     });
-    console.log("ثبت‌نام با موفقیت:", data.users); // اضافه کردن پیام در کنسول
-    if (!data.users || !data.users.id) {
+    console.log("ثبت‌نام با موفقیت:", data); // اضافه کردن پیام در کنسول
+    if (!data || !data.id) {
       throw new Error("اطلاعات کاربر معتبر نیست.");
     }
-    return data.users;
+    return data;
   } catch (error) {
     console.error("خطا در ارسال اطلاعات به سرور:");
     throw error;
@@ -132,10 +133,10 @@ export const register = async (
 
 export const login = async (email: string, password: string) => {
   try {
-    const { data } = await client.get("/db.json");
+    const { data } = await client.get("/users.json");
 
-    console.log(data.users);
-    const findUser = data.users.find(
+    console.log(data);
+    const findUser = data.find(
       (user: IUser) => user.email === email && user.password === password
     );
     if (findUser) {
@@ -155,10 +156,10 @@ export const getBlogCategoryImages = async () => {
   try {
     const { data } = await client({
       method: "Get",
-      url: "/db.json",
+      url: "/blog.json",
     });
-    console.log(data.blog)
-    return data.blog;
+    console.log(data);
+    return data;
   } catch (error) {
     console.error("خطا در دریافت اطلاعات", error);
   }
@@ -168,26 +169,25 @@ export const getBlogImages = async () => {
   try {
     const { data } = await client({
       method: "GET",
-      url: "/db.json",
+      url: "/blog.json",
     });
-    console.log(data.blog);
-    return data.blog;
+    console.log(data);
+    return data;
   } catch (error) {
     console.error("خطا در دریافت اطلاعات", error);
-    throw error
+    throw error;
   }
 };
 export const getBlogArticles = async () => {
   try {
     const { data } = await client({
       method: "GET",
-      url: "/db.json",
+      url: "/blog.json",
     });
-    console.log(data.blog);
-    return data.blog;
+    console.log(data);
+    return data;
   } catch (error) {
     console.error("خطا در دریافت اطلاعات", error);
-    throw error
+    throw error;
   }
 };
-
