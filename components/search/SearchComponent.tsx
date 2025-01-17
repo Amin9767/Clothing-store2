@@ -17,12 +17,15 @@ export default function SearchComponent() {
       let allMatchedItems: IProduct[] = [];
       Object.values(getData).forEach((genderCat) => {
         Object.values(genderCat).forEach((items) => {
-          const matchedItems = items.filter((item: IProduct) =>
-            item.title.toLowerCase().includes(searchQuery.toLowerCase())
-          );
-          allMatchedItems = [...allMatchedItems, ...matchedItems];
+          if (Array.isArray(items)) {
+            const matchedItems = items.filter((item: IProduct) =>
+              item.title.toLowerCase().includes(searchQuery.toLowerCase())
+            );
+            allMatchedItems = [...allMatchedItems, ...matchedItems];
+          }
         });
       });
+      console.log(allMatchedItems);
       setResults(allMatchedItems);
     } catch (error) {
       console.error("خطا در دریافت اطلاعات", error);
@@ -68,7 +71,7 @@ export default function SearchComponent() {
               console.log(filteredResults);
               console.log(item);
               return (
-                <Link key={index} href={``}>
+                <Link key={index} href={`/store/${item.title}`}>
                   <li className="bg-slate-100 p-2">
                     <h3>{item.title}</h3>
                   </li>

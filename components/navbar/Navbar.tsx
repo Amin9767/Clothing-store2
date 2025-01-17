@@ -31,9 +31,11 @@ export default function Navbar() {
           <div className="md:flex w-full justify-center items-center mx-auto md:flex-col gap-2 md:flex-1">
             <SearchComponent />
             {isPathBlog ? (
-              <ul className="flex  gap-6 col-span-3 font-medium">
+              <ul className="flex w-full gap-6 col-span-3 font-medium mt-2 md:mt-0">
                 <li className="relative group">
-                  <Link href={"/blog"}>مد و استایل</Link>
+                  <Link className="text-sm md:text-base" href={"/blog"}>
+                    مد و استایل
+                  </Link>
                   <div className="absolute right-2 hidden  space-y-2 bg-white shadow-lg group-hover:block z-20 rounded-md ">
                     <ul className="flex flex-col gap-2 p-2 w-56">
                       <Link href="/blog/store/men">
@@ -225,7 +227,7 @@ export default function Navbar() {
             </Link>
             {user ? (
               <div className="flex gap-4">
-                <p>{user?.username || "نام کاربری موجود نیست"}</p>
+                <p>{user?.userName || "نام کاربری موجود نیست"}</p>
                 <button onClick={handleLogOut} className="font-light">
                   خروج
                 </button>

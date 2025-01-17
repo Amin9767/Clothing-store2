@@ -1,6 +1,13 @@
 import axios from "axios";
 import { IUser } from "../serverTypes/serverTypes";
+import { error } from "console";
 
+interface interfaceUser {
+  email: string;
+  id: string;
+  password: string;
+  userName: string;
+}
 const client = axios.create({
   baseURL:
     "https://clothing-strore-db-default-rtdb.asia-southeast1.firebasedatabase.app/",
@@ -88,13 +95,14 @@ export const checkEmailExist = async (email: string) => {
       url: `/users.json`,
     });
     console.log("Fetched users:", data);
+    const users: interfaceUser[] = Object.values(data);
 
-    if (!data || !Array.isArray(data)) {
+    if (!users || !Array.isArray(users)) {
       console.error("API returned invalid data:", data);
       return [];
     }
 
-    const filteredUsers = data.filter(
+    const filteredUsers = users.filter(
       (user: { email: string }) => user.email === email
     );
     return filteredUsers.length > 0 ? filteredUsers : [];
@@ -111,7 +119,7 @@ export const register = async (
   password: string
 ) => {
   try {
-    const { data } = await client({
+    const { data, status } = await client({
       method: "POST",
       url: "/users.json",
       data: {
@@ -121,10 +129,18 @@ export const register = async (
       },
     });
     console.log("ثبت‌نام با موفقیت:", data); // اضافه کردن پیام در کنسول
-    if (!data || !data.id) {
+    if (status !== 200) {
+      console.error("خطا در دریافت اطلاعات کاربران", status);
       throw new Error("اطلاعات کاربر معتبر نیست.");
     }
-    return data;
+    console.log(status);
+    const userId = data.name;
+    if (!userId) {
+      throw new Error("اطاعات کاربر در دسترس نیست");
+    }
+    console.log(userId);
+
+    return { userId, userName, email, password }; // برگشت داده‌های کاربر
   } catch (error) {
     console.error("خطا در ارسال اطلاعات به سرور:");
     throw error;
@@ -133,15 +149,27 @@ export const register = async (
 
 export const login = async (email: string, password: string) => {
   try {
-    const { data } = await client.get("/users.json");
+    const { data, status } = await client.get("/users.json");
 
-    console.log(data);
-    const findUser = data.find(
-      (user: IUser) => user.email === email && user.password === password
+    if (status !== 200) {
+      console.error("خطا در دریافت اطلاعات کاربران:", status);
+      throw new Error("مشکل در دریافت داده‌ها از سرور.");
+    }
+    console.log("داده های کاربران", data);
+    const users = Object.values(data) as Array<{
+      email: string;
+      password: string;
+      userName?: string;
+    }>;
+    const findUser = users.find(
+      (user) => user.email === email && user.password === password
     );
     if (findUser) {
       console.log("کاربر یافت شد:", findUser);
-      return findUser; // بازگرداندن کاربر یافت شده
+      return {
+        userName: findUser.userName,
+        email: findUser.email,
+      }; // بازگرداندن کاربر یافت شده
     } else {
       console.log("کاربر یافت نشد.");
       return null; // اگر کاربر پیدا نشد، null برگردانید

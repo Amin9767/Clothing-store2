@@ -73,7 +73,7 @@ export interface ICartContext {
 
 export interface IUser {
   id: number;
-  username: string;
+  N: string;
   password: string;
   email: string;
 }
@@ -81,7 +81,7 @@ export interface IUser {
 export interface IAutoContext {
   user: IUser | null;
   handleRegister: (
-    username: string,
+    userName: string,
     email: string,
     password: string
   ) => Promise<void>;

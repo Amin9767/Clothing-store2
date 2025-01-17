@@ -36,11 +36,14 @@ export default function BlogCategoryImageComponent({
     }
   };
   return (
-    <div className="my-10 flex items-center justify-between ">
+    <div className="my-10 flex flex-wrap gap-4 justify-between items-center ">
       {blogCatImages.map((item) => {
         return (
-          <div key={item.id} className="flex flex-col items-center gap-2 ">
-            <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-purple-500 ">
+          <div
+            key={item.id}
+            className="flex justify-center flex-col items-center gap-2 flex-grow"
+          >
+            <div className="w-16 h-16 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-purple-500 ">
               <Image
                 src={item.image}
                 width={500}
@@ -50,7 +53,7 @@ export default function BlogCategoryImageComponent({
               />
             </div>
             <h1
-              className="cursor-pointer"
+              className="cursor-pointer text-sm md:text-base"
               onClick={(e) => handleClickCategory(e)}
             >
               {item.title}
