@@ -4,14 +4,14 @@ import { UseAutoContext } from "@/contexts/AuthContext";
 import React, { useState } from "react";
 
 type FormData = {
-  username: string;
+  userName: string;
   email: string;
   password: string;
 };
 
 export default function RegisterForm() {
   const [formData, setFormData] = useState<FormData>({
-    username: "",
+    userName: "",
     email: "",
     password: "",
   });
@@ -33,7 +33,7 @@ export default function RegisterForm() {
 
     const validationErrors: string[] = [];
 
-    if (!formData.username.trim()) validationErrors.push("نام الزامی است.");
+    if (!formData.userName.trim()) validationErrors.push("نام الزامی است.");
     if (!formData.email.includes("@"))
       validationErrors.push("ایمیل معتبر وارد کنید.");
 
@@ -43,7 +43,7 @@ export default function RegisterForm() {
     }
     try {
       await handleRegister(
-        formData.username,
+        formData.userName,
 
         formData.email,
         formData.password
@@ -51,7 +51,7 @@ export default function RegisterForm() {
       alert("ثبت‌نام با موفقیت انجام شد!");
       console.log(formData);
       setFormData({
-        username: "",
+        userName: "",
         email: "",
         password: "",
       });
@@ -82,9 +82,9 @@ export default function RegisterForm() {
         <div className="mb-4">
           <input
             type="text"
-            id="username"
-            name="username"
-            value={formData.username}
+            id="userName"
+            name="userName"
+            value={formData.userName}
             onChange={handleChange}
             className="w-full border rounded p-2"
             placeholder="نام کاربری"

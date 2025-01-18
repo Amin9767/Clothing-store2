@@ -72,8 +72,8 @@ export interface ICartContext {
 }
 
 export interface IUser {
-  id: number;
-  N: string;
+  id?: string;
+  userName?: string;
   password: string;
   email: string;
 }

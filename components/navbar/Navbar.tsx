@@ -13,7 +13,7 @@ export default function Navbar() {
   const { cartItems } = useCartContext();
   const { user, handleLogOut } = UseAutoContext();
   console.log(user);
-  console.log(user?.username);
+  console.log(user?.userName);
   const path = usePathname();
   const isPath = path === "/store";
   const isPathBlog = path.startsWith("/blog");

@@ -10,7 +10,6 @@ import { checkEmailExist, login, register } from "../services/api";
 import { useRouter } from "next/navigation";
 import { AxiosError } from "axios";
 import { IAutoContext, IUser } from "../serverTypes/serverTypes";
-import { json } from "stream/consumers";
 
 interface IAuthContextProvider {
   children: ReactNode;
@@ -52,7 +51,7 @@ export const AuthContextProvider = ({ children }: IAuthContextProvider) => {
   }, []);
 
   const handleRegister = async (
-    username: string,
+    userName: string,
     email: string,
     password: string
   ) => {
@@ -74,7 +73,7 @@ export const AuthContextProvider = ({ children }: IAuthContextProvider) => {
         alert("ایمیل تکراری است");
         return;
       }
-      await register(username, email, password);
+      await register(userName, email, password);
       alert("ثبت نام با موفقیت انجام شد حالا وارد شوید");
       router.push("/login");
     } catch (error) {
