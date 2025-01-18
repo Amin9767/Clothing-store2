@@ -13,13 +13,19 @@ export default function MagazineComponent() {
             <div className="flex flex-col gap-4">
               <div className="grid grid-cols-12 gap-4">
                 <div className="col-span-12 md:col-span-4 rounded-md overflow-hidden">
-                  <Image
-                    src={"/magazine/Blog_2.webp"}
-                    width={600}
-                    height={200}
-                    alt="magazine"
-                    className="h-auto object-cover md:h-auto"
-                  />
+                  <Link
+                    href={
+                      "/blog/women/25 مدل از زیباترین مدل های مانتو مخمل زنانه"
+                    }
+                  >
+                    <Image
+                      src={"/magazine/Blog_2.webp"}
+                      width={600}
+                      height={200}
+                      alt="magazine"
+                      className="h-auto object-cover md:h-auto"
+                    />
+                  </Link>
                 </div>
                 <div className="col-span-12 md:col-span-8 rounded-md overflow-hidden">
                   <Link href={"/blog/men/انواع کاپشن مردانه مدل 2025"}>

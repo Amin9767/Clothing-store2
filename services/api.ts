@@ -169,6 +169,7 @@ export const login = async (email: string, password: string) => {
       return {
         email: findUser.email,
         password: findUser.password,
+        userName: findUser.userName,
       }; // بازگرداندن کاربر یافت شده
     } else {
       console.log("کاربر یافت نشد.");

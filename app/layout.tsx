@@ -10,6 +10,8 @@ import BreadCrumb from "../components/breadCrumb/BreadCrumb";
 import { Suspense } from "react";
 import { Roboto } from "next/font/google";
 import MobileMenuComponent from "@/components/mobileMenuComponent/MobileMenuComponent";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -43,6 +45,7 @@ export default function RootLayout({
             </SliderContextProvider>
           </CartContextProvider>
         </AuthContextProvider>
+        <ToastContainer />
       </body>
     </html>
   );

@@ -35,7 +35,7 @@ export default function RandomDesktopComponent({
                     key={item.id}
                     href={`/store/${targetCategory}/${targetSubCategory}/${item.title}`}
                   >
-                    <div className="w-36 h-52 md:w-56 md:h-72 flex flex-col justify-center items-center  shadow-lg relative rounded-2xl overflow-hidden">
+                    <div className="w-36 h-52 md:w-56 md:h-[23rem] flex flex-col justify-center items-center  shadow-lg relative rounded-2xl overflow-hidden">
                       <Image
                         src={item.image}
                         width={200}
@@ -81,7 +81,7 @@ export default function RandomDesktopComponent({
                     spaceBetween: 10,
                   },
                   1024: {
-                    slidesPerView: 5,
+                    slidesPerView: 4,
                     spaceBetween: 10,
                   },
                 }}

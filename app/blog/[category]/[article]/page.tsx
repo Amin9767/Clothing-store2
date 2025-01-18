@@ -19,6 +19,7 @@ export default function Article() {
   console.log(params.article);
   console.log(params.category);
   const paramsCat: TBlogCategoryKeys = params.category as TBlogCategoryKeys;
+  console.log(paramsCat);
   const paramsArticle: string = params.article as string;
   const [article, setArticle] = useState<IArticle | null>(null);
   const decodedParamsArticle = useMemo(
@@ -30,6 +31,7 @@ export default function Article() {
   const fetchData = useCallback(async () => {
     const [responseArticle] = await Promise.all([getBlogArticles()]);
     if (responseArticle) {
+      console.log(responseArticle);
       const articles: TArticles = responseArticle.blogArticles[paramsCat];
       console.log(articles);
       const targetArticle = articles.find(

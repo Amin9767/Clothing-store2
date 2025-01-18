@@ -19,7 +19,7 @@ export default function BlogCategory() {
   
   const paramsCategory: TBlogCategoryKeys =
     params.category as TBlogCategoryKeys;
-  console.log(params.category);
+  console.log(paramsCategory);
   const [blogImages, setBlogImages] = useState<{ id: number; image: string }[]>(
     []
   );

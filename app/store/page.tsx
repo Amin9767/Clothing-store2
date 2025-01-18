@@ -80,14 +80,14 @@ export default function Home() {
         <div >
           <CategoryComponent category={mainPageCategory} />
           <RandomComponent
-            targetCategory="men"
+            targetCategory="مردانه"
             targetSubCategory="پیراهن"
             count={6}
             py="14"
           />
           <BannerComponent2 />
           <RandomComponent
-            targetCategory="women"
+            targetCategory="زنانه"
             targetSubCategory="شال و روسری"
             count={6}
             py="14"

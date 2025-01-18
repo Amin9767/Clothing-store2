@@ -7,7 +7,7 @@ export default function BannerComponent2() {
     <div>
       <div className="hidden md:block">
         <Container>
-          <div className="grid grid-cols-12 gap-4 mt-20">
+          <div className="grid grid-cols-12 gap-4 my-20">
             <div className="col-span-12 md:col-span-8 h-auto  ">
               <Image
                 width={800}

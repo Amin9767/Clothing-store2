@@ -7,8 +7,6 @@ import {
   TProductsBrand,
 } from "@/serverTypes/serverTypes";
 import { getProducts } from "@/services/api";
-import Link from "next/link";
-import Container from "../container/Container";
 import RandomMobileComponent from "./RandomMobileComponent";
 import RandomDesktopComponent from "./RandomDesktopComponent";
 
@@ -18,6 +16,7 @@ export default function RandomComponent({
   count,
   py,
 }: IRandomProps) {
+  console.log(targetCategory);
   console.log(targetSubCategory);
 
   const [targetProducts, setTargetProducts] = useState<IProduct[] | []>([]);

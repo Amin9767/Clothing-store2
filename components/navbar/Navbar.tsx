@@ -38,7 +38,7 @@ export default function Navbar() {
                   </Link>
                   <div className="absolute right-2 hidden  space-y-2 bg-white shadow-lg group-hover:block z-20 rounded-md ">
                     <ul className="flex flex-col gap-2 p-2 w-56">
-                      <Link href="/blog/store/men">
+                      <Link href="/blog/men">
                         <li className="bg-sky-100  hover:bg-pink-500 px-2 rounded-md font-light">
                           مد و استایل آقایان
                         </li>
