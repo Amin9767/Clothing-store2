@@ -69,6 +69,7 @@ export const getProducts = async () => {
       method: "GET",
       url: `/products.json`,
     });
+    console.log(data);
     return data;
   } catch (error) {
     console.log(error);
