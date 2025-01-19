@@ -8,7 +8,7 @@ interface interfaceUser {
 }
 const client = axios.create({
   baseURL:
-    "/",
+    "https://clothing-strore-db-default-rtdb.asia-southeast1.firebasedatabase.app",
   timeout: 5000,
   headers: {
     "Content-Type": "application/json",
@@ -19,10 +19,10 @@ export const getSlider = async () => {
   try {
     const { data } = await client({
       method: "GET",
-      url: `/db.json`,
+      url: `/swiper.json`,
     });
-    console.log(data.swiper);
-    return data.swiper;
+    console.log(data);
+    return data;
   } catch (error) {
     console.log(error);
   }
@@ -31,10 +31,10 @@ export const getCategoryList = async () => {
   try {
     const { data } = await client({
       method: "GET",
-      url: `/db.json`,
+      url: `/category.json`,
     });
-    console.log(data.category);
-    return data.category;
+    console.log(data);
+    return data;
   } catch (error) {
     console.log(error);
   }
@@ -43,10 +43,10 @@ export const getBrands = async () => {
   try {
     const { data } = await client({
       method: "GET",
-      url: `/db.json`,
+      url: `/brands.json`,
     });
-    console.log(data.brands);
-    return data.brands;
+    console.log(data);
+    return data;
   } catch (error) {
     console.log(error);
   }
@@ -55,10 +55,10 @@ export const getDiscount = async () => {
   try {
     const { data } = await client({
       method: "GET",
-      url: `/db.json`,
+      url: `/discount.json`,
     });
-    console.log(data.discount);
-    return data.discount;
+    console.log(data);
+    return data;
   } catch (error) {
     console.log(error);
   }
@@ -67,9 +67,9 @@ export const getProducts = async () => {
   try {
     const { data } = await client({
       method: "GET",
-      url: `/db.json`,
+      url: `/products.json`,
     });
-    return data.products;
+    return data;
   } catch (error) {
     console.log(error);
   }
@@ -78,9 +78,9 @@ export const getBestSellingBrand = async () => {
   try {
     const { data } = await client({
       method: "GET",
-      url: `/db.json`,
+      url: `/BestSellingBrands.json`,
     });
-    return data.BestSellingBrands;
+    return data;
   } catch (error) {
     console.log(error);
   }
@@ -93,14 +93,14 @@ export const checkEmailExist = async (email: string) => {
       url: `/users.json`,
     });
     console.log("Fetched users:", data);
-    const users: interfaceUser[] = Object.values(data);
+    // const users: interfaceUser[] = Object.values(data);
 
-    if (!users || !Array.isArray(users)) {
+    if (!data || !Array.isArray(data)) {
       console.error("API returned invalid data:", data);
       return [];
     }
 
-    const filteredUsers = users.filter(
+    const filteredUsers = data.filter(
       (user: { email: string }) => user.email === email
     );
     return filteredUsers.length > 0 ? filteredUsers : [];
