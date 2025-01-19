@@ -8,8 +8,8 @@ interface interfaceUser {
 }
 const client = axios.create({
   baseURL:
-    "https://clothing-strore-db-default-rtdb.asia-southeast1.firebasedatabase.app/",
-  timeout: 20000,
+    "/",
+  timeout: 5000,
   headers: {
     "Content-Type": "application/json",
   },
@@ -19,10 +19,10 @@ export const getSlider = async () => {
   try {
     const { data } = await client({
       method: "GET",
-      url: `/swiper.json`,
+      url: `/db.json`,
     });
-    console.log(data);
-    return data;
+    console.log(data.swiper);
+    return data.swiper;
   } catch (error) {
     console.log(error);
   }
@@ -31,10 +31,10 @@ export const getCategoryList = async () => {
   try {
     const { data } = await client({
       method: "GET",
-      url: `/category.json`,
+      url: `/db.json`,
     });
-    console.log(data);
-    return data;
+    console.log(data.category);
+    return data.category;
   } catch (error) {
     console.log(error);
   }

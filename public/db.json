@@ -3,18 +3,18 @@
     "mainSlide": [
       {
         "id": 1,
-        "imageMobile": "https://raw.githubusercontent.com/Amin9767/my-images-repo/refs/heads/master/slide/main/Best_Kids_Brand_01-Mobile_Size.webp",
-        "imageDesktop": "https://raw.githubusercontent.com/Amin9767/my-images-repo/refs/heads/master/slide/main/Best_Kids_Brand_01-Desktop_Size.webp"
+        "imageMobile": "/slide/main/Best_Kids_Brand_01-Mobile_Size.webp",
+        "imageDesktop": "/slide/main/Best_Kids_Brand_01-Desktop_Size.webp"
       },
       {
         "id": 2,
-        "imageMobile": "https://raw.githubusercontent.com/Amin9767/my-images-repo/refs/heads/master/slide/main/Best_Women_Brand_01-Mobile_Size.webp",
-        "imageDesktop": "https://raw.githubusercontent.com/Amin9767/my-images-repo/refs/heads/master/slide/main/Best_Women_Brand_01-Desktop_Size.webp"
+        "imageMobile": "/slide/main/Best_Women_Brand_01-Mobile_Size.webp",
+        "imageDesktop": "/slide/main/Best_Women_Brand_01-Desktop_Size.webp"
       },
       {
         "id": 3,
-        "imageMobile": "https://raw.githubusercontent.com/Amin9767/my-images-repo/refs/heads/master/slide/main/Mens_Winter_Clothing-Mobile_Size.webp",
-        "imageDesktop": "https://raw.githubusercontent.com/Amin9767/my-images-repo/refs/heads/master/slide/main/Mens_Winter_Clothing-Desktop_Size.webp"
+        "imageMobile": "/slide/main/Mens_Winter_Clothing-Mobile_Size.webp",
+        "imageDesktop": "/slide/main/Mens_Winter_Clothing-Desktop_Size.webp"
       }
     ],
     "زنانه": [
@@ -238,7 +238,7 @@
         "isComingSoon": "به زودی"
       }
     ],
-    "پسرانه": [
+    "پسرانه":[
       {
         "id": 1,
         "title": "پیراهن پسرانه",
@@ -1009,33 +1009,34 @@
             "subCategory": "شلوار"
           }
         ],
-        "پیراهن پسرانه": [
-          {
-            "id": 8,
-            "title": "ست بلوز و شلوارک لنگر سفید آبی ملورینا Melorina",
-            "image": "/products/children/boys/پیراهن پسرانه/836055_main_1.webp"
-          },
-          {
-            "id": 9,
-            "title": "ست بلوز و شلوارک پسرانه قایق سفید کرم ملورینا Melorina",
-            "image": "/products/children/boys/پیراهن پسرانه/cf3265_1_.webp"
-          },
-          {
-            "id": 10,
-            "title": "ست بلوز و شلوارک پسرانه سبز شکلاتی ملورینا Melorina",
-            "image": "/products/children/boys/پیراهن پسرانه/cg3028_1_-.webp"
-          },
-          {
-            "id": 11,
-            "title": "ژیله بچگانه لینن راه راه ملورینا",
-            "image": "/products/children/boys/پیراهن پسرانه/cg3642_1_.webp"
-          },
-          {
-            "id": 12,
-            "title": "پیراهن پسرانه لینن شیری تی تیش Teeteesh طرح موز",
-            "image": "/products/children/boys/پیراهن پسرانه/cg3644_1_.webp"
-          }
-        ]
+       "پیراهن پسرانه":[
+        {
+          "id":8,
+          "title":"ست بلوز و شلوارک لنگر سفید آبی ملورینا Melorina",
+          "image":"/products/children/boys/پیراهن پسرانه/836055_main_1.webp"
+        },
+        {
+          "id":9,
+          "title":"ست بلوز و شلوارک پسرانه قایق سفید کرم ملورینا Melorina",
+          "image":"/products/children/boys/پیراهن پسرانه/cf3265_1_.webp"
+        },
+        {
+          "id":10,
+          "title":"ست بلوز و شلوارک پسرانه سبز شکلاتی ملورینا Melorina",
+          "image":"/products/children/boys/پیراهن پسرانه/cg3028_1_-.webp"
+        },
+        {
+          "id":11,
+          "title":"ژیله بچگانه لینن راه راه ملورینا",
+          "image":"/products/children/boys/پیراهن پسرانه/cg3642_1_.webp"
+        },
+        {
+          "id":12,
+          "title":"پیراهن پسرانه لینن شیری تی تیش Teeteesh طرح موز",
+          "image":"/products/children/boys/پیراهن پسرانه/cg3644_1_.webp"
+        }
+       ]
+        
       }
     }
   },
