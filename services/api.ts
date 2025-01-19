@@ -43,10 +43,10 @@ export const getBrands = async () => {
   try {
     const { data } = await client({
       method: "GET",
-      url: `/brands.json`,
+      url: `/db.json`,
     });
-    console.log(data);
-    return data;
+    console.log(data.brands);
+    return data.brands;
   } catch (error) {
     console.log(error);
   }
@@ -55,10 +55,10 @@ export const getDiscount = async () => {
   try {
     const { data } = await client({
       method: "GET",
-      url: `/discount.json`,
+      url: `/db.json`,
     });
-    console.log(data);
-    return data;
+    console.log(data.discount);
+    return data.discount;
   } catch (error) {
     console.log(error);
   }
@@ -67,9 +67,9 @@ export const getProducts = async () => {
   try {
     const { data } = await client({
       method: "GET",
-      url: `/products.json`,
+      url: `/db.json`,
     });
-    return data;
+    return data.products;
   } catch (error) {
     console.log(error);
   }
@@ -78,9 +78,9 @@ export const getBestSellingBrand = async () => {
   try {
     const { data } = await client({
       method: "GET",
-      url: `/BestSellingBrands.json`,
+      url: `/db.json`,
     });
-    return data;
+    return data.BestSellingBrands;
   } catch (error) {
     console.log(error);
   }
