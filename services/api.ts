@@ -1,6 +1,4 @@
 import axios from "axios";
-import { IUser } from "../serverTypes/serverTypes";
-import { error } from "console";
 
 interface interfaceUser {
   email: string;
@@ -11,7 +9,7 @@ interface interfaceUser {
 const client = axios.create({
   baseURL:
     "https://clothing-strore-db-default-rtdb.asia-southeast1.firebasedatabase.app/",
-  timeout: 5000,
+  timeout: 20000,
   headers: {
     "Content-Type": "application/json",
   },
