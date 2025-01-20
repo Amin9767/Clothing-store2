@@ -7,8 +7,7 @@ interface interfaceUser {
   userName: string;
 }
 const client = axios.create({
-  baseURL:
-    "https://clothing-strore-db-default-rtdb.asia-southeast1.firebasedatabase.app",
+  baseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL,
   timeout: 5000,
   headers: {
     "Content-Type": "application/json",
