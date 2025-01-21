@@ -1,6 +1,11 @@
 "use client";
 import { getBrands, getProducts } from "@/services/api";
-import { IBrands, IBrandsResponse, IProduct } from "@/serverTypes/serverTypes";
+import {
+  IBrands,
+  IBrandsResponse,
+  IKidsProducts,
+  IProduct,
+} from "@/serverTypes/serverTypes";
 import { useParams } from "next/navigation";
 import React, { useCallback, useEffect, useState } from "react";
 import ProductDetailPage from "@/components/productDetailPage/ProductDetailPage";
@@ -71,17 +76,18 @@ export default function DetailPage() {
           console.log(getTargetProducts);
 
           const getTargetProduct = getTargetProducts.find(
-            (item) => item.title === decodeProductId
+            (item: IProduct) => item.title === decodeProductId
           );
           getTargetProduct && setTargetProduct(getTargetProduct);
           console.log(getTargetProduct);
         } else {
-          const getTargetProducts = response?.[getCat]?.[whatCat];
+          const getTargetProducts: IKidsProducts =
+            response?.[getCat]?.[whatCat];
           console.log(getTargetProducts);
           console.log(response?.[getCat]?.[whatCat]);
           const flatProducts = Object.values(
             response?.[getCat]?.[whatCat]
-          ).flat();
+          ).flat() as IProduct[];
           console.log(flatProducts);
           const targetProduct =
             flatProducts.find((item) => item.title === decodeProductId) || null;

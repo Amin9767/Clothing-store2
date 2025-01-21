@@ -34,6 +34,7 @@ export interface IProduct {
   image: string;
   createdAt?: string;
   daste?: string;
+  category?: string;
 }
 export type IProductsLogo = IProductLogo[];
 export interface IProductLogo {
@@ -135,4 +136,11 @@ export interface IRandomProps {
   targetCategory: string;
   count: number;
   py: string;
+}
+ 
+
+
+export interface IKidsProducts {
+  [key:string]: IProduct[]
+  
 }
