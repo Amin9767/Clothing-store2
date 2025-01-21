@@ -238,7 +238,7 @@
         "isComingSoon": "به زودی"
       }
     ],
-    "پسرانه":[
+    "پسرانه": [
       {
         "id": 1,
         "title": "پیراهن پسرانه",
@@ -247,7 +247,8 @@
       {
         "id": 2,
         "title": "تیشرت پسرانه",
-        "image": "/products/daste/kids/پسرانه/_-__17_1.jpg"
+        "image": "/products/daste/kids/پسرانه/_-__17_1.jpg",
+        "isComingSoon": "به زودی"
       },
       {
         "id": 3,
@@ -1009,34 +1010,34 @@
             "subCategory": "شلوار"
           }
         ],
-       "پیراهن پسرانه":[
-        {
-          "id":8,
-          "title":"ست بلوز و شلوارک لنگر سفید آبی ملورینا Melorina",
-          "image":"/products/children/boys/پیراهن پسرانه/836055_main_1.webp"
-        },
-        {
-          "id":9,
-          "title":"ست بلوز و شلوارک پسرانه قایق سفید کرم ملورینا Melorina",
-          "image":"/products/children/boys/پیراهن پسرانه/cf3265_1_.webp"
-        },
-        {
-          "id":10,
-          "title":"ست بلوز و شلوارک پسرانه سبز شکلاتی ملورینا Melorina",
-          "image":"/products/children/boys/پیراهن پسرانه/cg3028_1_-.webp"
-        },
-        {
-          "id":11,
-          "title":"ژیله بچگانه لینن راه راه ملورینا",
-          "image":"/products/children/boys/پیراهن پسرانه/cg3642_1_.webp"
-        },
-        {
-          "id":12,
-          "title":"پیراهن پسرانه لینن شیری تی تیش Teeteesh طرح موز",
-          "image":"/products/children/boys/پیراهن پسرانه/cg3644_1_.webp"
-        }
-       ]
-        
+        "پیراهن پسرانه": [
+          {
+            "id": 8,
+            "title": "ست بلوز و شلوارک لنگر سفید آبی ملورینا Melorina",
+            "image": "/products/children/boys/پیراهن پسرانه/836055_main_1.webp"
+          },
+          {
+            "id": 9,
+            "title": "ست بلوز و شلوارک پسرانه قایق سفید کرم ملورینا Melorina",
+            "image": "/products/children/boys/پیراهن پسرانه/cf3265_1_.webp"
+          },
+          {
+            "id": 10,
+            "title": "ست بلوز و شلوارک پسرانه سبز شکلاتی ملورینا Melorina",
+            "image": "/products/children/boys/پیراهن پسرانه/cg3028_1_-.webp"
+          },
+          {
+            "id": 11,
+            "title": "ژیله بچگانه لینن راه راه ملورینا",
+            "image": "/products/children/boys/پیراهن پسرانه/cg3642_1_.webp"
+          },
+          {
+            "id": 12,
+            "title": "پیراهن پسرانه لینن شیری تی تیش Teeteesh طرح موز",
+            "image": "/products/children/boys/پیراهن پسرانه/cg3644_1_.webp"
+          }
+        ],
+        "تیشرت پسرانه": []
       }
     }
   },

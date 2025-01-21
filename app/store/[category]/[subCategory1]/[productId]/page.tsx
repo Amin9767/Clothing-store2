@@ -58,16 +58,36 @@ export default function DetailPage() {
         }
       } else if (getCat === "بچه گانه") {
         const response = await getProducts();
-        console.log(response);
-        const getTargetProducts =
-          response?.[getCat]?.[whatCat]?.[decodeSubCategory];
-        console.log(getTargetProducts);
-        const targetProduct =
-          getTargetProducts.find(
-            (item: { title: string }) => item.title === decodeProductId
-          ) || null;
-        console.log("Target Product:", targetProduct);
-        setTargetProduct(targetProduct);
+        if (
+          decodeSubCategory === "بلوز دخترانه" ||
+          decodeSubCategory === "شلوار و دامن دخترانه" ||
+          decodeSubCategory === "پیراهن پسرانه" ||
+          decodeSubCategory === "تیشرت پسرانه" ||
+          decodeSubCategory === "کاپشن پسرانه"
+        ) {
+          console.log(response);
+          const getTargetProducts =
+            response?.[getCat]?.[whatCat]?.[decodeSubCategory];
+          console.log(getTargetProducts);
+
+          const getTargetProduct = getTargetProducts.find(
+            (item) => item.title === decodeProductId
+          );
+          getTargetProduct && setTargetProduct(getTargetProduct);
+          console.log(getTargetProduct);
+        } else {
+          const getTargetProducts = response?.[getCat]?.[whatCat];
+          console.log(getTargetProducts);
+          console.log(response?.[getCat]?.[whatCat]);
+          const flatProducts = Object.values(
+            response?.[getCat]?.[whatCat]
+          ).flat();
+          console.log(flatProducts);
+          const targetProduct =
+            flatProducts.find((item) => item.title === decodeProductId) || null;
+          console.log("Target Product:", targetProduct);
+          setTargetProduct(targetProduct);
+        }
       } else {
         const response = await getProducts();
         console.log(response);

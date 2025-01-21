@@ -53,6 +53,7 @@ export default function CategoryComponent({
         } `}
       >
         {category.map((item: ICategory) => {
+          console.log(item);
           const normalizedTitle = item.title
             .trim()
             .replace(/-/g, "")

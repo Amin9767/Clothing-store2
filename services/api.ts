@@ -13,7 +13,7 @@ const client = axios.create({
     "Content-Type": "application/json",
   },
 });
-
+console.log(process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL)
 export const getSlider = async () => {
   try {
     const { data } = await client({

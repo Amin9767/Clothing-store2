@@ -78,10 +78,10 @@ export default function subCategory1Page() {
             ResponseProducts[getCat].دخترانه?.[getSubCat1] || [];
           console.log(getTargetProducts);
           setProducts(getTargetProducts);
-          setProducts(getTargetProducts);
         } else if (
           getSubCat1 === "پیراهن پسرانه" ||
-          getSubCat1 === "کاپشن پسرانه"
+          getSubCat1 === "کاپشن پسرانه"||
+          getSubCat1 === "تیشرت پسرانه"
         ) {
           const ResponseProducts = await getProducts();
           console.log(ResponseProducts);

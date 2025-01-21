@@ -35,6 +35,8 @@ export default function ProductsPageComponent({
   const [minPrice, setMinPrice] = useState<number | string>("");
   const [maxPrice, setMaxPrice] = useState<number | string>("");
   const [isPriceMenuOpen, setIsPriceMenuOpen] = useState(false);
+  const [loading, setLoading] = useState<boolean>(true); // وضعیت بارگذاری
+
   useEffect(() => {
     try {
       let filtered = [...products];
@@ -353,7 +355,7 @@ export default function ProductsPageComponent({
                 ) : (
                   <div className="w-full h-full flex items-center justify-center">
                     <p className="text-center text-xl font-bold">
-                      محصولی موجود نیست.
+                      محصولی یافت نشد
                     </p>
                   </div>
                 )}
