@@ -1,11 +1,5 @@
 import axios from "axios";
 
-interface interfaceUser {
-  email: string;
-  id: string;
-  password: string;
-  userName: string;
-}
 const client = axios.create({
   baseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL,
   timeout: 5000,
@@ -13,17 +7,15 @@ const client = axios.create({
     "Content-Type": "application/json",
   },
 });
-console.log(process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL)
 export const getSlider = async () => {
   try {
     const { data } = await client({
       method: "GET",
       url: `/swiper.json`,
     });
-    console.log(data);
     return data;
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 export const getCategoryList = async () => {
@@ -32,10 +24,9 @@ export const getCategoryList = async () => {
       method: "GET",
       url: `/category.json`,
     });
-    console.log(data);
     return data;
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 export const getBrands = async () => {
@@ -44,10 +35,9 @@ export const getBrands = async () => {
       method: "GET",
       url: `/brands.json`,
     });
-    console.log(data);
     return data;
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 export const getDiscount = async () => {
@@ -56,10 +46,9 @@ export const getDiscount = async () => {
       method: "GET",
       url: `/discount.json`,
     });
-    console.log(data);
     return data;
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 export const getProducts = async () => {
@@ -68,10 +57,9 @@ export const getProducts = async () => {
       method: "GET",
       url: `/products.json`,
     });
-    console.log(data);
     return data;
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 export const getBestSellingBrand = async () => {
@@ -82,7 +70,7 @@ export const getBestSellingBrand = async () => {
     });
     return data;
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
@@ -92,8 +80,6 @@ export const checkEmailExist = async (email: string) => {
       method: "GET",
       url: `/users.json`,
     });
-    console.log("Fetched users:", data);
-    // const users: interfaceUser[] = Object.values(data);
 
     if (!data || !Array.isArray(data)) {
       console.error("API returned invalid data:", data);
@@ -105,7 +91,7 @@ export const checkEmailExist = async (email: string) => {
     );
     return filteredUsers.length > 0 ? filteredUsers : [];
   } catch (error) {
-    console.log("خطا در برسی کاربر", error);
+    console.error("خطا در برسی کاربر", error);
     return false;
   }
 };
@@ -126,17 +112,14 @@ export const register = async (
         password,
       },
     });
-    console.log("ثبت‌نام با موفقیت:", data); // اضافه کردن پیام در کنسول
     if (status !== 200) {
       console.error("خطا در دریافت اطلاعات کاربران", status);
       throw new Error("اطلاعات کاربر معتبر نیست.");
     }
-    console.log(status);
     const userId = data.name;
     if (!userId) {
       throw new Error("اطاعات کاربر در دسترس نیست");
     }
-    console.log(userId);
 
     return { userId, userName, email, password }; // برگشت داده‌های کاربر
   } catch (error) {
@@ -153,7 +136,6 @@ export const login = async (email: string, password: string) => {
       console.error("خطا در دریافت اطلاعات کاربران:", status);
       throw new Error("مشکل در دریافت داده‌ها از سرور.");
     }
-    console.log("داده های کاربران", data);
     const users = Object.values(data) as Array<{
       email: string;
       password: string;
@@ -163,14 +145,12 @@ export const login = async (email: string, password: string) => {
       (user) => user.email === email && user.password === password
     );
     if (findUser) {
-      console.log("کاربر یافت شد:", findUser);
       return {
         email: findUser.email,
         password: findUser.password,
         userName: findUser.userName,
       }; // بازگرداندن کاربر یافت شده
     } else {
-      console.log("کاربر یافت نشد.");
       return null; // اگر کاربر پیدا نشد، null برگردانید
     }
   } catch (error) {
@@ -185,7 +165,6 @@ export const getBlogCategoryImages = async () => {
       method: "Get",
       url: "/blog.json",
     });
-    console.log(data);
     return data;
   } catch (error) {
     console.error("خطا در دریافت اطلاعات", error);
@@ -198,7 +177,6 @@ export const getBlogImages = async () => {
       method: "GET",
       url: "/blog.json",
     });
-    console.log(data);
     return data;
   } catch (error) {
     console.error("خطا در دریافت اطلاعات", error);
@@ -211,7 +189,6 @@ export const getBlogArticles = async () => {
       method: "GET",
       url: "/blog.json",
     });
-    console.log(data);
     return data;
   } catch (error) {
     console.error("خطا در دریافت اطلاعات", error);

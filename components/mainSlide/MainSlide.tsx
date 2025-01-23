@@ -7,7 +7,7 @@ interface IManSlideProps {
 
 export default function MainSlide({ mainDataSlider }: IManSlideProps) {
   return (
-    <div className="">
+    <div>
       {mainDataSlider && (
         <Carousel
           data={mainDataSlider}

@@ -1,5 +1,5 @@
 "use client";
-import BlogImagesComponent from "@/components/blogImagesComponent/BlogImagesComponent";
+import BlogImagesComponent from "@/components/blogComponents/BlogImagesComponent";
 import Container from "@/components/container/Container";
 import { getBlogArticles, getBlogImages } from "@/services/api";
 import { TArticles, TBlogCategoryKeys } from "@/serverTypes/serverTypes";

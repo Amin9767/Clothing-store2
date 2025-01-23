@@ -19,7 +19,6 @@ export default function LoginFormUI() {
   };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(data);
     const validationErrors: string[] = [];
     if (!data.email.trim()) validationErrors.push("نام الزامی است.");
     if (!data.email.includes("@"))

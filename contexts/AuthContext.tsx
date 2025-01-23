@@ -59,10 +59,8 @@ export const AuthContextProvider = ({ children }: IAuthContextProvider) => {
   ) => {
     try {
       const existingUser = await checkEmailExist(email);
-      console.log("Response from API:", existingUser);
 
       if (!Array.isArray(existingUser)) {
-        console.error("Unexpected response:", existingUser);
         toast("خطایی در بررسی کاربر رخ داده است.");
         return;
       }
@@ -122,7 +120,7 @@ export const AuthContextProvider = ({ children }: IAuthContextProvider) => {
         toast("ایمیل یا رمز عبور اشتباه است.");
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
       toast("خطای ورود.لطفا دوباره تلاش کنید");
     }
   };

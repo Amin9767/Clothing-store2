@@ -29,7 +29,6 @@ export default function RegisterForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Data being sent:", formData);
 
     const validationErrors: string[] = [];
 
@@ -49,7 +48,6 @@ export default function RegisterForm() {
         formData.password
       );
       alert("ثبت‌نام با موفقیت انجام شد!");
-      console.log(formData);
       setFormData({
         userName: "",
         email: "",
@@ -57,16 +55,10 @@ export default function RegisterForm() {
       });
       setErrors([]);
     } catch (error) {
-      console.log("خطا در ثبت نام", error);
       setErrors(["خطایی در ثبت نام رخ داد.لطفا دوبازه تلاش کنید"]);
     }
-    // اگر فرم معتبر است
   };
-  // useEffect(() => {
-  //   fetch("https://api.iransweb.com/user")
-  //     .then((response) => response.json())
-  //     .then((data) => console.log(data));
-  // }, []);
+  
 
   return (
     <div className="max-w-md mx-auto mt-10 p-6 border rounded-lg shadow-md">

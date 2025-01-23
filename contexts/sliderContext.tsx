@@ -23,7 +23,6 @@ export const SliderContextProvider = ({ children }: ISliderContextProvider) => {
   useEffect(() => {
     const fetchData = async () => {
       const response: ISliderResponse = await getSlider();
-      console.log(response);
       if (response) {
         setSlideData(response.mainSlide);
       }

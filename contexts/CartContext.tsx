@@ -24,7 +24,6 @@ export const CartContextProvider = ({
   const [cartItems, setCartItems] = useState<TCartItems>([]); // مقدار پیش‌فرض آرایه خالی است
 
   const handleAddItemToCart = (targetProduct: IProduct) => {
-    console.log(targetProduct);
     if (!targetProduct && targetProduct === null) {
       console.error("No product selected to add to cart");
       return;
@@ -32,7 +31,6 @@ export const CartContextProvider = ({
     setCartItems((prev) => {
       const ProductExist = prev.some((item) => item.id == targetProduct.id);
       if (!targetProduct.id) {
-        console.log("product does not have an Id");
         return prev;
       }
       if (ProductExist) {

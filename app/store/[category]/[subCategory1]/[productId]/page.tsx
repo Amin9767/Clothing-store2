@@ -15,24 +15,20 @@ export default function DetailPage() {
   const [brand, setBrand] = useState<IProduct | null>(null);
 
   const params = useParams();
-  console.log(params);
   const getCategory = params.category || "men";
   const getCat = decodeURIComponent(
     Array.isArray(params.category) ? params.category[0] : params.category
   );
-  console.log(getCat);
 
   const paramsProductId = params.productId;
   const decodeProductId =
     typeof paramsProductId === "string"
       ? decodeURIComponent(paramsProductId)
       : "";
-  console.log(decodeProductId);
   const decodeSubCategory =
     typeof params.subCategory1 === "string"
       ? decodeURIComponent(params.subCategory1)
       : "";
-  console.log(decodeSubCategory);
 
   const fetchData = useCallback(async () => {
     let whatCat = "";
@@ -41,7 +37,6 @@ export default function DetailPage() {
     } else if (decodeSubCategory.includes("پسرانه")) {
       whatCat = "پسرانه";
     }
-    console.log(whatCat);
     try {
       if (getCategory === "brands") {
         const responseBrands: IBrandsResponse = await getBrands();
@@ -70,40 +65,30 @@ export default function DetailPage() {
           decodeSubCategory === "تیشرت پسرانه" ||
           decodeSubCategory === "کاپشن پسرانه"
         ) {
-          console.log(response);
           const getTargetProducts =
             response?.[getCat]?.[whatCat]?.[decodeSubCategory];
-          console.log(getTargetProducts);
 
           const getTargetProduct = getTargetProducts.find(
             (item: IProduct) => item.title === decodeProductId
           );
           getTargetProduct && setTargetProduct(getTargetProduct);
-          console.log(getTargetProduct);
         } else {
           const getTargetProducts: IKidsProducts =
             response?.[getCat]?.[whatCat];
-          console.log(getTargetProducts);
-          console.log(response?.[getCat]?.[whatCat]);
           const flatProducts = Object.values(
             response?.[getCat]?.[whatCat]
           ).flat() as IProduct[];
-          console.log(flatProducts);
           const targetProduct =
             flatProducts.find((item) => item.title === decodeProductId) || null;
-          console.log("Target Product:", targetProduct);
           setTargetProduct(targetProduct);
         }
       } else {
         const response = await getProducts();
-        console.log(response);
         const getTargetProducts = response?.[getCat]?.[decodeSubCategory];
-        console.log(getTargetProducts);
         const targetProduct =
           getTargetProducts.find(
             (item: { title: string }) => item.title === decodeProductId
           ) || null;
-        console.log("Target Product:", targetProduct);
         setTargetProduct(targetProduct);
       }
     } catch (error) {

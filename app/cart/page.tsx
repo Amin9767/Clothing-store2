@@ -27,7 +27,6 @@ export default function CartPage() {
 
 
   if (!isClient || !user) return null
-  console.log(cartItems);
 
   return (
     <div>
@@ -35,7 +34,6 @@ export default function CartPage() {
         <div className="grid grid-cols-12 mt-20 gap-4">
           <div className="col-span-8 flex flex-col gap-4">
             {cartItems.map((item, index) => {
-              console.log(cartItems);
               return (
                 <div
                   key={index}

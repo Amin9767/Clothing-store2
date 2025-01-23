@@ -1,4 +1,3 @@
-
 export type TSlides = ISlide[];
 export interface ISlide {
   id: number;
@@ -137,10 +136,16 @@ export interface IRandomProps {
   count: number;
   py: string;
 }
- 
-
 
 export interface IKidsProducts {
-  [key:string]: IProduct[]
-  
+  [key: string]: IProduct[];
+}
+
+export interface IMobileFilteredComponent {
+  handleToggleMenu: (menu: "filter" | "sort") => void;
+  isOpenMenu: string | null;
+  setIsPriceMenuOpen: (isOpen: boolean) => void;
+  isPriceMenuOpen: boolean;
+  setMinPrice: (value: string) => void;
+  setMaxPrice: (value: string) => void;
 }

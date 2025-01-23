@@ -11,9 +11,7 @@ export default function SearchComponent() {
   const fetchData = async () => {
     try {
       const data = await getProducts();
-      console.log(data);
       const getData: TGenderData = data;
-      console.log(getData);
       let allMatchedItems: IProduct[] = [];
       Object.values(getData).forEach((genderCat) => {
         Object.values(genderCat).forEach((items) => {
@@ -25,13 +23,11 @@ export default function SearchComponent() {
           }
         });
       });
-      console.log(allMatchedItems);
       setResults(allMatchedItems);
     } catch (error) {
       console.error("خطا در دریافت اطلاعات", error);
     }
   };
-  console.log(results);
   useEffect(() => {
     if (!searchQuery.trim()) {
       setResults([]);

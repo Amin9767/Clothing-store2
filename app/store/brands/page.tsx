@@ -11,9 +11,7 @@ export default function page() {
     try {
       const brandsResponse: IBrandsResponse = await getBrands();
       if (brandsResponse) {
-        console.log(brandsResponse);
         const combined = Object.values(brandsResponse).flat();
-        console.log(combined);
         setBrands(combined);
       }
     } catch (error) {

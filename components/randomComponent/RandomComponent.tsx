@@ -1,6 +1,4 @@
 import React, { useCallback, useEffect, useState } from "react";
-import Carousel from "../carousel/Carousel";
-import Image from "next/image";
 import {
   IProduct,
   IRandomProps,
@@ -16,19 +14,15 @@ export default function RandomComponent({
   count,
   py,
 }: IRandomProps) {
-  console.log(targetCategory);
-  console.log(targetSubCategory);
+  
 
   const [targetProducts, setTargetProducts] = useState<IProduct[] | []>([]);
   const fetchData = useCallback(async () => {
     try {
       const response = await getProducts();
-      console.log("Fetched Products:", response);
       const getTargetProducts =
         response?.[targetCategory]?.[targetSubCategory] || [];
-      console.log("Target Products:", getTargetProducts);
       const shuffled = getTargetProducts.sort(() => Math.random() - 0.5);
-      console.log("Shuffled Products:", shuffled);
       const selectedProducts = shuffled.slice(0, count);
       setTargetProducts(selectedProducts);
     } catch (error) {
