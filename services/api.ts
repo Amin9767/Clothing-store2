@@ -1,4 +1,5 @@
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const client = axios.create({
   baseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL,
@@ -15,7 +16,18 @@ export const getSlider = async () => {
     });
     return data;
   } catch (error) {
-    console.error(error);
+    console.error(error, "خطا در دریافت اطلاعات");
+    toast.warn("لطفا از فیلترشکن استفاده کنید😒", {
+      closeOnClick: true,
+      autoClose: false,
+      style: {
+        backgroundColor: "darkred",
+        color: "white",
+        width: "30rem",
+        height: "7rem",
+        fontSize: "1.5rem",
+      },
+    });
   }
 };
 export const getCategoryList = async () => {

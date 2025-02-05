@@ -26,115 +26,71 @@ import {
 import { useParams } from "next/navigation";
 import React, { useCallback, useEffect, useState } from "react";
 import ProductsPageComponent from "@/components/productsPageComponent/ProductsPageComponent";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "@/redux/store";
+import { fetchSliderData } from "@/redux/sliderSlice";
+import { fetchCategoryData } from "@/redux/categorySlice";
+import { fetchBrandsData } from "@/redux/brandsSlice";
+import { fetchBestSellingBrandsData } from "@/redux/bestSellingBrandsSlice";
+import { fetchDiscountData } from "@/redux/discountSlice";
 
 export default function CategoryPage() {
-  const [dataSlider, setDataSlider] = useState<TSlides | []>([]);
-  const [categoryState, setCategoryState] = useState<TCategories | null>(null);
-  const [productsBrand, setProductsBrand] = useState<TProductsBrand | null>(
-    null
-  );
-  const [products, setProducts] = useState<IProduct[]>([]);
-
-  const [productsDiscount, setProductsDiscount] = useState<TDiscounts | null>(
-    null
-  );
   const [isExpanded, setIsExpanded] = useState(true);
-  const [BestSellingBrands, setBestSellingBrands] =
-    useState<IProductsLogo | null>(null);
-  console.log(dataSlider);
   type CategoryParams = {
     category: string;
   };
   const params = useParams() as CategoryParams;
   const categoryKey = decodeURIComponent(params.category);
-  console.log(categoryKey);
 
-  const fetchData = useCallback(async () => {
-    try {
-      const [
-        productsResponse,
-        sliderResponse,
-        categoryResponse,
-        brandsResponse,
-        discountsResponse,
-        bestSellingBrandsResponse,
-      ] = await Promise.all([
-        getProducts(),
-        getSlider(),
-        getCategoryList(),
-        getBrands(),
-        getDiscount(),
-        getBestSellingBrand(),
-      ]);
-      if (
-        !productsResponse ||
-        !sliderResponse ||
-        !categoryResponse ||
-        !brandsResponse ||
-        !discountsResponse ||
-        !bestSellingBrandsResponse
-      ) {
-        console.error("خطا در دریافت اطلاعات ریسپانس ها");
-        return;
-      }
-      if (productsResponse) {
-        // if (categoryKey === "girls" || "boys") {
-        //   const getTargetProducts = productsResponse.kids[categoryKey];
-        //   console.log(getTargetProducts);
-        //   const combinedProducts = getTargetProducts
-        //     ? Object.values(getTargetProducts).flat()
-        //     : [];
-        //   console.log(combinedProducts);
-        //   const combinedProductsType: TProducts = combinedProducts.map(
-        //     (item) => item as IProduct
-        //   );
-        //   console.log(combinedProductsType);
-        //   setProducts(combinedProductsType);
-        // }
-        console.log(productsResponse);
-        const getBrands = brandsResponse.category;
-        console.log(getBrands);
-      }
-      if (categoryResponse) {
-        console.log(categoryResponse);
-        setCategoryState(categoryResponse[categoryKey]);
-      }
-      if (sliderResponse) {
-        console.log(sliderResponse);
-        const categoryData = sliderResponse[categoryKey];
-        console.log(categoryData);
-        if (categoryData) {
-          setDataSlider(categoryData);
-        } else {
-          console.error(`No data found for category: ${categoryKey}`);
-        }
-      }
-      if (brandsResponse) {
-        console.log(brandsResponse);
-        console.log(brandsResponse[categoryKey]);
-        const categoryData = brandsResponse[categoryKey];
-        if (categoryData) {
-          setProductsBrand(categoryData);
-        } else {
-          console.error(`No data found for category: ${categoryKey}`);
-        }
-      }
-      if (discountsResponse) {
-        const getProductsDiscount = discountsResponse[categoryKey];
-        setProductsDiscount(getProductsDiscount);
-      }
-      if (bestSellingBrandsResponse) {
-        const getBestSellingBrand = bestSellingBrandsResponse;
-        setBestSellingBrands(getBestSellingBrand);
-      }
-    } catch (error) {
-      console.error("خطا در دریافت اطلاعات", error);
-    }
-  }, [categoryKey]);
+  const categoryMapping: Record<string, string> = {
+    مردانه: "men",
+    زنانه: "women",
+    "بچه گانه": "kids",
+    پسرانه: "boys",
+    دخترانه: "girls",
+  };
+
+  const updatedCategoryKey = categoryMapping[categoryKey] || categoryKey;
+
+  const dispatch = useDispatch<AppDispatch>();
+
+  const slider = useSelector(
+    (state: RootState) => state.slider[updatedCategoryKey]
+  );
+  const category = useSelector(
+    (state: RootState) => state.category[updatedCategoryKey]
+  );
+  const reduxBrands = useSelector(
+    (state: RootState) => state.brands[updatedCategoryKey]
+  );
+
+  const reduxBestSellingBrands = useSelector(
+    (state: RootState) => state.bestSellingBrands.bestBrands
+  );
+
+  const reduxDiscount = useSelector(
+    (state: RootState) => state.discount[updatedCategoryKey]
+  );
 
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        dispatch(fetchSliderData());
+
+        dispatch(fetchCategoryData());
+
+        dispatch(fetchBrandsData());
+
+        dispatch(fetchBestSellingBrandsData());
+
+        dispatch(fetchDiscountData());
+      } catch (error) {
+        console.error("خطا در دیسپچ کردن اکشن‌ها:", error);
+      }
+    };
+
     fetchData();
-  }, [categoryKey]);
+  }, [dispatch]);
 
   const expandedHandler = () => {
     setIsExpanded((prev) => !prev);
@@ -143,9 +99,9 @@ export default function CategoryPage() {
   return (
     <div>
       {/* slide */}
-      <MainSlide mainDataSlider={dataSlider} />\ {/* دسته بندی */}
+      <MainSlide mainDataSlider={slider} />\ {/* دسته بندی */}
       <CategoryComponent
-        category={categoryState || []}
+        category={category || []}
         categoryParams={categoryKey || ""}
       />
       {/*    برند  */}
@@ -159,12 +115,12 @@ export default function CategoryPage() {
             ? "ادمک"
             : ""
         }
-        productsBrand={productsBrand || []}
+        productsBrand={reduxBrands || []}
         category={categoryKey}
         py="14"
       />
       {/* تخفبف */}
-      <Discount productsDiscount={productsDiscount || []} />
+      <Discount productsDiscount={reduxDiscount || []} />
       {/* برند */}
       <Brand
         category={categoryKey}
@@ -177,11 +133,11 @@ export default function CategoryPage() {
             ? "بلوز و تونیک"
             : ""
         }
-        productsBrand={productsBrand || []}
+        productsBrand={reduxBrands || []}
         py="14"
       />
       {/* پرفروش ترین برندها */}
-      <BestSelling py="14" BestSellingBrands={BestSellingBrands || []} />
+      <BestSelling py="14" BestSellingBrands={reduxBestSellingBrands || []} />
       {/*مقاله */}
       {categoryKey === "مردانه" ? (
         <div className="my-16">

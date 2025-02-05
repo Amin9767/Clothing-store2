@@ -1,5 +1,5 @@
 "use client";
-import React, { useCallback, useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import Container from "../../components/container/Container";
 import {
   getBlogArticles,
@@ -15,66 +15,107 @@ import {
 import BlogImagesComponent from "../../components/blogComponents/BlogImagesComponent";
 import BlogArticles from "@/components/blogComponents/BlogArticles";
 
+const fetchBlogCategoryImages = async () => {
+  const response = await getBlogCategoryImages();
+  return response?.blogCategoryImages;
+};
+
+const fetchMainBlogImages = async () => {
+  const response = await getBlogImages();
+  return response?.blogImages.main;
+};
+
+const fetchBlogArticles = async () => {
+  const response = await getBlogArticles();
+  if (response && response.blogArticles) {
+    const getArticles = response.blogArticles;
+    // تبدیل به آرایه
+    const convertToArray = Object.values(getArticles).flat() as TArticles;
+
+    // یونیک کردن ایدی ها
+    const seenIds = new Set<number>();
+    let idCounter =
+      Math.max(...convertToArray.map((item: IArticle) => item.id)) + 1; // شروع از بزرگ‌ترین id موجود
+
+    return convertToArray.map((item) => {
+      if (seenIds.has(item.id)) {
+        // اگر id تکراری است، مقدار جدید اختصاص بده
+        return { ...item, id: idCounter++ };
+      }
+      seenIds.add(item.id); // اگر id یکتا بود، آن را اضافه کن
+      return item;
+    });
+  }
+  return [];
+};
+
 export default function Blog() {
-  const [blogCatImages, setBlogCatImages] = useState([]);
-  const [mainBlogImages, setMainBlogImages] = useState<TBlogImages | []>([]);
-  const [blogArticles, setBlogArticles] = useState<TArticles | []>([]);
-  const fetchData = useCallback(async () => {
-    try {
-      const [blogCatImagesResponse, blogImagesResponse, blogArticlesResponse] =
-        await Promise.all([
-          getBlogCategoryImages(),
-          getBlogImages(),
-          getBlogArticles(),
-        ]);
-      if (blogCatImagesResponse) {
-        setBlogCatImages(blogCatImagesResponse.blogCategoryImages);
-      } else {
-        console.log("دیتایی موجود نیست");
-      }
-      if (blogImagesResponse) {
-        setMainBlogImages(blogImagesResponse.blogImages.main);
-      } else {
-        console.log("دیتایی موجود نیست");
-      }
-      if (blogArticlesResponse && blogArticlesResponse.blogArticles) {
-        const getArticles = blogArticlesResponse.blogArticles;
+  const {
+    data: blogCatImages,
+    isLoading: loadingBlogCatImages,
+    error: errorBlogCatImages,
+  } = useQuery({
+    queryKey: ["blogCategoryImages"],
+    queryFn: fetchBlogCategoryImages,
+  });
+  const {
+    data: mainBlogImages,
+    isLoading: loadingMinBlogImages,
+    error: errorMainBlogImages,
+  } = useQuery({
+    queryKey: ["mainBlogImages"],
+    queryFn: fetchMainBlogImages,
+  });
+  const {
+    data: blogArticles,
+    isLoading: loadingBlogArticles,
+    error: errorBlogArticles,
+  } = useQuery({
+    queryKey: ["blogArticles"],
+    queryFn: fetchBlogArticles,
+  });
 
-        // تبدیل به آرایه
-        const convertToArray = Object.values(getArticles).flat() as TArticles;
+  if (loadingBlogArticles || loadingBlogCatImages || loadingMinBlogImages) {
+    return (
+      <div
+        role="status"
+        className="flex justify-center items-center fixed w-full h-full"
+      >
+        <svg
+          aria-hidden="true"
+          className="w-16 h-16 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+          viewBox="0 0 100 101"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+            fill="currentColor"
+          />
+          <path
+            d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+            fill="currentFill"
+          />
+        </svg>
+        <span className="sr-only">Loading...</span>
+      </div>
+    );
+  }
 
-        // یونیک کردن ایدی ها
-        const seenIds = new Set<number>();
-        let idCounter =
-          Math.max(...convertToArray.map((item: IArticle) => item.id)) + 1; // شروع از بزرگ‌ترین id موجود
+  if (errorBlogCatImages || errorMainBlogImages || errorBlogArticles) {
+    return (
+      <div className="w-full h-screen flex items-center justify-center">
+        <p>خطا در بارگذاری داده‌ها!</p>
+      </div>
+    );
+  }
 
-        const updatedShuffleArray = convertToArray.map((item) => {
-          if (seenIds.has(item.id)) {
-            // اگر id تکراری است، مقدار جدید اختصاص بده
-            return { ...item, id: idCounter++ };
-          }
-          seenIds.add(item.id); // اگر id یکتا بود، آن را اضافه کن
-          return item;
-        });
-
-        setBlogArticles(updatedShuffleArray);
-      } else {
-        console.log("دیتای blogArticlesResponse.blogArticles موجود نیست");
-      }
-    } catch (error) {
-      console.error("خطا در فراخوانی API ", error);
-    }
-  }, []);
-
-  useEffect(() => {
-    fetchData();
-  }, [fetchData]);
   return (
     <>
       <BlogImagesComponent blogImages={mainBlogImages} />
       <Container>
         <BlogCategoryImageComponent blogCatImages={blogCatImages} />
-        <BlogArticles blogArticles={blogArticles} />
+        <BlogArticles blogArticles={blogArticles ?? []} />
       </Container>
     </>
   );

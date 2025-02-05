@@ -1,23 +1,15 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "../components/navbar/Navbar";
 import { AuthContextProvider } from "../contexts/AuthContext";
-import { SliderContextProvider } from "../contexts/sliderContext";
 import Footer from "../components/footer/Footer";
-import { CartContextProvider } from "../contexts/CartContext";
 import BreadCrumb from "../components/breadCrumb/BreadCrumb";
 import { Suspense } from "react";
-import { Roboto } from "next/font/google";
 import MobileMenuComponent from "@/components/mobileMenuComponent/MobileMenuComponent";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
-const roboto = Roboto({
-  subsets: ["latin"],
-  variable: "--font-roboto",
-  weight: ["100", "900"],
-});
+import ReduxProvider from "../redux/ReduxProvider";
+import { QueryClientProviderComponent } from "../components/QueryClientProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -33,8 +25,8 @@ export default function RootLayout({
     <html lang="fa" dir="rtl">
       <body>
         <AuthContextProvider>
-          <CartContextProvider>
-            <SliderContextProvider>
+          <ReduxProvider>
+            <QueryClientProviderComponent>
               <Navbar />
               <BreadCrumb />
               <div className="min-h-screen">
@@ -42,8 +34,8 @@ export default function RootLayout({
               </div>
               <MobileMenuComponent />
               <Footer />
-            </SliderContextProvider>
-          </CartContextProvider>
+            </QueryClientProviderComponent>
+          </ReduxProvider>
         </AuthContextProvider>
         <ToastContainer />
       </body>

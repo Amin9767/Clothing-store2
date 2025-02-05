@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Container from "../container/Container";
+import Link from "next/link";
 
 export default function BannerComponent2() {
   return (
@@ -9,14 +10,16 @@ export default function BannerComponent2() {
         <Container>
           <div className="grid grid-cols-12 gap-4 my-20">
             <div className="col-span-12 md:col-span-8 h-auto  ">
-              <Image
-                width={800}
-                height={200}
-                src={"/products/main/_01-Desktop.webp"}
-                alt="discount"
-                className="object-cover w-full h-full md:rounded-md overflow-hidden"
-                loading="lazy"
-              />
+              <Link href={"store/زنانه/لباس زیر و راحتی"}>
+                <Image
+                  width={800}
+                  height={200}
+                  src={"/products/main/_-Desktop_2.webp"}
+                  alt="discount"
+                  className="object-cover w-full h-full md:rounded-md overflow-hidden"
+                  loading="lazy"
+                />
+              </Link>
             </div>
             <div className="col-span-12 md:col-span-4 flex flex-col gap-4 md:rounded-md overflow-hidden">
               <div className="w-full ">

@@ -3,18 +3,18 @@ import Link from "next/link";
 import Container from "../container/Container";
 import { IoCartOutline } from "react-icons/io5";
 import { usePathname } from "next/navigation";
-import { useCartContext } from "@/contexts/CartContext";
 import { UseAutoContext } from "@/contexts/AuthContext";
 import SearchComponent from "../search/SearchComponent";
 import NavStore from "./NavStore";
 import NavBlog from "./NavBlog";
+import { useSelector } from "react-redux";
+import { RootState } from "@/redux/store";
 
 export default function Navbar() {
-  const { cartItems = [] } = useCartContext() || {};
   const { user, handleLogOut } = UseAutoContext();
   const path = usePathname();
   const isPathBlog = path.startsWith("/blog");
-
+  const cartItems = useSelector((state:RootState) => state.cart.cart);
   return (
     <div className={"w-full shadow-lg flex   items-center relative"}>
       <Container>

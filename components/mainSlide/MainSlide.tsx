@@ -1,8 +1,8 @@
 import React from "react";
 import Carousel from "../carousel/Carousel";
-import { TSlides } from "@/serverTypes/serverTypes";
+import { ISlide, TSlides } from "@/serverTypes/serverTypes";
 interface IManSlideProps {
-  mainDataSlider: TSlides;
+  mainDataSlider: ISlide[];
 }
 
 export default function MainSlide({ mainDataSlider }: IManSlideProps) {

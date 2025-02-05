@@ -3,10 +3,11 @@ import React from "react";
 import { IoCartOutline } from "react-icons/io5";
 import Image from "next/image";
 import Link from "next/link";
-import { useCartContext } from "@/contexts/CartContext";
+import { useSelector } from "react-redux";
+import { RootState } from "@/redux/store";
 
 export default function MobileMenuComponent() {
-  const { cartItems } = useCartContext();
+  const cartItems = useSelector((state: RootState) => state.cart.cart);
   return (
     <div className="fixed bottom-4 left-0 w-full flex justify-center items-center z-50 md:hidden">
       <div className="bg-[#87cefa] rounded-full w-[90%] flex justify-between items-center px-6 py-3  shadow-md shadow-gray-600">
@@ -42,7 +43,6 @@ export default function MobileMenuComponent() {
             width={24}
             height={24}
             alt="mobile-icon"
-            
           />
           <span className="text-sm text-black">پروفایل</span>
         </div>

@@ -1,59 +1,45 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
-import {
-  getBestSellingBrand,
-  getCategoryList,
-  getDiscount,
-  getProducts,
-} from "../../services/api";
+import { getDiscount } from "../../services/api";
 import RandomComponent from "../../components/randomComponent/RandomComponent";
 import BannerComponent from "../../components/bannerComponent/BannerComponent";
 import BannerComponent2 from "../../components/bannerComponent2/BannerComponent2";
 import BestSelling from "../../components/bestSellingBrands/BestSelling";
-import { IProductsLogo, TCategories } from "../../serverTypes/serverTypes";
+import { TProductsDiscount } from "../../serverTypes/serverTypes";
 import MagazineComponent from "../../components/magazineComponent/MagazineComponent";
 import CategoryComponent from "@/components/category/CategoryComponent";
 import MainSlide from "@/components/mainSlide/MainSlide";
-import { useSliderContext } from "@/contexts/sliderContext";
-type TProductsDiscount = IProductDiscount[];
-interface IProductDiscount {
-  id: number;
-  image: string;
-  createdAt: string;
-}
+import { useDispatch, useSelector } from "react-redux";
+import { fetchSliderData } from "@/redux/sliderSlice";
+import { AppDispatch, RootState } from "@/redux/store";
+import { fetchCategoryData } from "@/redux/categorySlice";
+import { fetchBestSellingBrandsData } from "@/redux/bestSellingBrandsSlice";
+import { fetchDiscountData } from "@/redux/discountSlice";
 
 export default function Home() {
-  const [mainDiscount, setMainDiscount] = useState<TProductsDiscount | []>([]);
-  const [mainPageCategory, setMainPageCategory] = useState<TCategories | []>(
-    []
-  );
-  console.log(mainPageCategory);
-  const [mainBestSellingBrands, setMainBestSellingBrands] = useState<
-    IProductsLogo | []
-  >([]);
+  const [mainDiscount, setMainDiscount] = useState<TProductsDiscount[]>([]);
 
-  const { slideData } = useSliderContext();
+  const dispatch = useDispatch<AppDispatch>();
+  const slider = useSelector((state: RootState) => state.slider.mainSlide);
+  const category = useSelector((state: RootState) => state.category.main);
+  const reduxBestSellingBrands = useSelector(
+    (state: RootState) => state.bestSellingBrands.bestBrands
+  );
+  useEffect(() => {
+    dispatch(fetchSliderData());
+    dispatch(fetchCategoryData());
+    dispatch(fetchBestSellingBrandsData());
+    dispatch(fetchDiscountData());
+  }, [dispatch]);
 
   const fetchData = useCallback(async () => {
     try {
-      const [categoryResponse, discountsResponse, bestSellingBrandsResponse] =
-        await Promise.all([
-          getCategoryList(),
-          getDiscount(),
-          getBestSellingBrand(),
-        ]);
+      const discountsResponse = await getDiscount();
 
-      if (categoryResponse) {
-        const getCategory = categoryResponse.main;
-        setMainPageCategory(getCategory);
-      }
       if (discountsResponse) {
+        console.log(discountsResponse);
         const getDiscount = discountsResponse.main;
         setMainDiscount(getDiscount);
-      }
-      if (bestSellingBrandsResponse) {
-        const getBestSellingBrand = bestSellingBrandsResponse;
-        setMainBestSellingBrands(getBestSellingBrand);
       }
     } catch (error) {
       console.error(error);
@@ -64,10 +50,9 @@ export default function Home() {
   }, [fetchData]);
   return (
     <div>
-      <MainSlide mainDataSlider={slideData} />
-
+      <MainSlide mainDataSlider={slider} />
       <div>
-        <CategoryComponent category={mainPageCategory} />
+        <CategoryComponent category={category} />
         <RandomComponent
           targetCategory="مردانه"
           targetSubCategory="پیراهن"
@@ -82,7 +67,7 @@ export default function Home() {
           py="14"
         />
         <BannerComponent />
-        <BestSelling BestSellingBrands={mainBestSellingBrands} py="14" />
+        <BestSelling BestSellingBrands={reduxBestSellingBrands} py="14" />
         <MagazineComponent />
       </div>
     </div>

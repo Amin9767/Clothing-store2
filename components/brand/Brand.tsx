@@ -47,14 +47,13 @@ export default function Brand({
                 <Carousel
                   data={findTargetBrand.products}
                   renderItem={(item) => {
-                    // console.log(item);
                     return (
                       <Link
                         href={`/store/brands/${findTargetBrand.title}/${item.title}`}
                       >
                         <div
                           key={item.id}
-                          className="w-36 h-52 md:h-72 md:w-56  flex flex-col justify-center items-center shadow-md relative rounded-lg md:rounded-2xl overflow-hidden"
+                          className="w-36 h-52 md:h-72 md:w-56  flex flex-col justify-center items-center shadow-md relative rounded-md md:rounded-md overflow-hidden"
                         >
                           <Image
                             src={item.image}

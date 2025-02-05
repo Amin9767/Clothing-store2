@@ -12,15 +12,18 @@ export default function subCategory1Page() {
     Array.isArray(params.category) ? params.category[0] : params.category
   );
 
-  console.log("cat =>", getCat);
+  console.log(getCat);
   const getSubCat1 = decodeURIComponent(
     Array.isArray(params.subCategory1)
       ? params.subCategory1[0]
       : params.subCategory1
   );
+  console.log("getsubcat1 =>", getSubCat1);
 
   const [category, setCategory] = useState<TCategories | []>([]);
   const [products, setProducts] = useState<IProduct[]>([]);
+
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,7 +32,10 @@ export default function subCategory1Page() {
           getCategoryList(),
           getProducts(),
         ]);
+        console.log(responseCategory);
+        console.log(ResponseProducts);
         const targetCategoryList = responseCategory[getSubCat1] || [];
+        console.log(targetCategoryList);
         setCategory(targetCategoryList);
 
         const getTargetProducts = ResponseProducts[getCat]?.[getSubCat1] || [];

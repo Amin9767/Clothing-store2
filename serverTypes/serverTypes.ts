@@ -1,4 +1,15 @@
-export type TSlides = ISlide[];
+export type TSlides = {
+  mainSlide: ISlide[];
+  "بچه گانه": ISlide[];
+  زنانه: ISlide[];
+  مردانه: ISlide[];
+};
+export interface ISlide {
+  id: number;
+  imageMobile: string;
+  imageDesktop: string;
+}
+
 export interface ISlide {
   id: number;
   imageMobile: string;
@@ -34,6 +45,16 @@ export interface IProduct {
   createdAt?: string;
   daste?: string;
   category?: string;
+}
+export interface ICartItem {
+  id: number;
+  title: string;
+  price: number;
+  image: string;
+  createdAt?: string;
+  daste?: string;
+  category?: string;
+  quantity: number;
 }
 export type IProductsLogo = IProductLogo[];
 export interface IProductLogo {
@@ -148,4 +169,33 @@ export interface IMobileFilteredComponent {
   isPriceMenuOpen: boolean;
   setMinPrice: (value: string) => void;
   setMaxPrice: (value: string) => void;
+}
+
+export type TProductsDiscount = IProductDiscount[];
+export interface IProductDiscount {
+  id: number;
+  image: string;
+  createdAt: string;
+}
+
+export interface ISliderState {
+  mainSlide: ISlide[];
+  kids: ISlide[];
+  women: ISlide[];
+  men: ISlide[];
+  [key: string]: any;
+
+  status: "idle" | "loading" | "succeeded" | "failed";
+}
+
+export interface ICategoryInRedux {
+  main: TCategories;
+  kids: TCategories;
+  women: TCategories;
+  men: TCategories;
+  boys: TCategories;
+  girls: TCategories;
+  [key: string]: any;
+
+  status: "idle" | "loading" | "succeeded" | "failed";
 }

@@ -11,6 +11,7 @@ interface TCategory {
 }
 
 export default function CategoryComponent({ category }: TCategory) {
+  console.log(category)
   const params = useParams();
   const getCat = params?.category
     ? decodeURIComponent(

@@ -1,22 +1,23 @@
 "use client";
-import React, { useContext } from "react";
+import React from "react";
 import Container from "../container/Container";
 import Image from "next/image";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { AiOutlineFileProtect } from "react-icons/ai";
 import { IProductDetailProps } from "@/serverTypes/serverTypes";
-import { useCartContext } from "@/contexts/CartContext";
 import { UseAutoContext } from "@/contexts/AuthContext";
 import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { cartSlice } from "@/redux/cartSlice";
 
 export default function ProductDetailPage({
   targetProduct,
 }: IProductDetailProps) {
   console.log(targetProduct);
-  const { handleAddItemToCart } = useCartContext();
+  const dispatch = useDispatch();
   const handleAddToCart = () => {
     if (targetProduct) {
-      handleAddItemToCart(targetProduct);
+      dispatch(cartSlice.actions.add(targetProduct));
     }
   };
   const { user } = UseAutoContext();
@@ -74,7 +75,10 @@ export default function ProductDetailPage({
                   افزودن به سبد خرید
                 </button>
               ) : (
-                <Link href={'/login'} className="border border-red-400 text-red-500 px-4 py-2 text-xl rounded-md">
+                <Link
+                  href={"/login"}
+                  className="border border-red-400 text-red-500 px-4 py-2 text-xl rounded-md"
+                >
                   ابتدا وارد شوید
                 </Link>
               )}

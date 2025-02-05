@@ -1,7 +1,9 @@
-import { TProducts } from "@/serverTypes/serverTypes";
+import { cartSlice } from "@/redux/cartSlice";
+import { ICartItem, IProduct, TProducts } from "@/serverTypes/serverTypes";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 interface IProductsProps {
   sortedProducts: TProducts;
@@ -16,11 +18,18 @@ function ProductsComponent({
   catParams,
   getSub,
 }: IProductsProps) {
+  
+  const dispatch = useDispatch();
+
+  const addToCartHandler = (item: IProduct, e: React.MouseEvent) => {
+    e.preventDefault();
+    dispatch(cartSlice.actions.add(item));
+  };
+
   return (
     <div className="w-full h-full grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 p-2 border-t pt-6">
       {sortedProducts && sortedProducts.length > 0 ? (
         sortedProducts.map((item, index) => {
-          console.log(item.title);
           return (
             <Link
               key={item.id}
@@ -29,7 +38,7 @@ function ProductsComponent({
             >
               <div
                 key={index}
-                className="h-full w-full flex flex-col  justify-between items-center shadow-lg rounded-lg overflow-hidden"
+                className="h-full w-full flex flex-col  justify-between items-center shadow-lg rounded-lg overflow-hidden relative group"
               >
                 <Image
                   src={item.image}
@@ -49,6 +58,13 @@ function ProductsComponent({
                     <span className="text-xs">تومان</span>
                   </div>
                 </div>
+                <button
+                  className="
+                 bg-blue-400 text-white rounded px-1 md:px-2 absolute top-10 right-3 hidden group-hover:block"
+                  onClick={(e) => addToCartHandler(item, e)}
+                >
+                  +
+                </button>
               </div>
             </Link>
           );
