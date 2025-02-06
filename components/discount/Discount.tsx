@@ -29,7 +29,7 @@ export default function Discount({ productsDiscount }: IDiscountProps) {
     <div>
       <div className="hidden md:block">
         <Container>
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 my-16">
+          <div className="flex md:flex-row items-center justify-between gap-4 my-16">
             {productsDiscount?.map((discount) => {
               return (
                 <Link key={discount.id} href={`/store/${getCat}/شلوار`}>
@@ -48,19 +48,18 @@ export default function Discount({ productsDiscount }: IDiscountProps) {
           </div>
         </Container>
       </div>
-      <div className="block md:hidden">
-        <div className="grid grid-cols-12 md:flex-row items-center justify-between gap-4 my-16">
+      <div className="md:hidden">
+        <div className="flex flex-col xs:flex-row items-center justify-between gap-4 my-16">
           {productsDiscount?.map((discount) => {
             return (
               <Link key={discount.id} href={`/store/${getCat}/${whatCat}`}>
-                <div className="col-span-12">
+                <div className="">
                   <Image
                     src={discount.image}
                     width={800}
                     height={400}
-                    layout="responsive"
                     alt="discount"
-                    className=" w-full object-cover"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </Link>
