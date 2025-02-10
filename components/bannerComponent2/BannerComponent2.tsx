@@ -51,7 +51,7 @@ export default function BannerComponent2() {
             <Image
               width={800}
               height={200}
-              src={"/products/main/_01-Desktop.webp"}
+              src={"/products/main/_-Desktop_2.webp"}
               alt="discount"
               className="object-cover w-full h-full md:rounded-md overflow-hidden"
               loading="lazy"
