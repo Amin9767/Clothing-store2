@@ -5,7 +5,6 @@ import React from "react";
 import Container from "../container/Container";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { Arapey } from "next/font/google";
 interface IDiscountProps {
   productsDiscount: TDiscounts;
 }

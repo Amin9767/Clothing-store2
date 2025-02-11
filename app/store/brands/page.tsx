@@ -5,7 +5,7 @@ import { IBrands, IBrandsResponse } from "@/serverTypes/serverTypes";
 import Link from "next/link";
 import React, { useCallback, useEffect, useState } from "react";
 
-export default function page() {
+export default function Page() {
   const [brands, setBrands] = useState<IBrands[] | []>([]);
   const fetchData = useCallback(async () => {
     try {

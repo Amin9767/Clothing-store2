@@ -3,7 +3,6 @@ import { getBrands, getProducts } from "@/services/api";
 import {
   IBrands,
   IBrandsResponse,
-  IKidsProducts,
   IProduct,
 } from "@/serverTypes/serverTypes";
 import { useParams } from "next/navigation";
@@ -71,10 +70,8 @@ export default function DetailPage() {
           const getTargetProduct = getTargetProducts.find(
             (item: IProduct) => item.title === decodeProductId
           );
-          getTargetProduct && setTargetProduct(getTargetProduct);
+          if (getTargetProduct) setTargetProduct(getTargetProduct);
         } else {
-          const getTargetProducts: IKidsProducts =
-            response?.[getCat]?.[whatCat];
           const flatProducts = Object.values(
             response?.[getCat]?.[whatCat]
           ).flat() as IProduct[];
@@ -94,7 +91,7 @@ export default function DetailPage() {
     } catch (error) {
       console.error("Error fetching product:", error);
     }
-  }, [decodeProductId, decodeSubCategory, getCat]);
+  }, [decodeProductId, decodeSubCategory, getCat, getCategory]);
 
   useEffect(() => {
     fetchData();

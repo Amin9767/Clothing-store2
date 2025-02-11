@@ -58,7 +58,7 @@ export default function BannerComponent() {
                 width={800}
                 height={800}
                 alt="banner"
-                className="w-full  object-cover"
+                className="w-full object-cover "
               />
             </div>
             <div className="col-span-6">
@@ -77,7 +77,7 @@ export default function BannerComponent() {
               width={1200}
               height={600}
               alt="banner"
-              className="w-full h-20 md:h-auto object-cover"
+              className="w-full h-32  object-cover"
             />
           </div>
           <div className="col-span-12 ">
@@ -86,7 +86,7 @@ export default function BannerComponent() {
               height={600}
               src={"/mainBanner/Tile_Dey_4_.webp"}
               alt="banner"
-              className="w-full object-cover h-20 md:h-auto"
+              className="w-full object-cover h-20 "
             />
           </div>
         </div>

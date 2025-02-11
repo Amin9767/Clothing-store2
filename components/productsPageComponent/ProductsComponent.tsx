@@ -1,9 +1,9 @@
 import { cartSlice } from "@/redux/cartSlice";
-import { ICartItem, IProduct, TProducts } from "@/serverTypes/serverTypes";
+import { IProduct, TProducts } from "@/serverTypes/serverTypes";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useCallback } from "react";
+import { useDispatch } from "react-redux";
 
 interface IProductsProps {
   sortedProducts: TProducts;
@@ -18,28 +18,29 @@ function ProductsComponent({
   catParams,
   getSub,
 }: IProductsProps) {
-  
   const dispatch = useDispatch();
-
-  const addToCartHandler = (item: IProduct, e: React.MouseEvent) => {
-    e.preventDefault();
-    dispatch(cartSlice.actions.add(item));
-  };
+  const addToCartHandler = useCallback(
+    (item: IProduct, e: React.MouseEvent) => {
+      e.preventDefault();
+      dispatch(cartSlice.actions.add(item));
+      const existingCart = JSON.parse(localStorage.getItem("cart") || "[]");
+      const updatedCart = [...existingCart, item];
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+    },
+    [dispatch]
+  );
 
   return (
     <div className="w-full h-full grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 p-2 border-t pt-6">
       {sortedProducts && sortedProducts.length > 0 ? (
-        sortedProducts.map((item, index) => {
+        sortedProducts.map((item) => {
           return (
             <Link
               key={item.id}
               href={`/store/${catParams}/${getSub}/${item.title}`}
               className=""
             >
-              <div
-                key={index}
-                className="h-full w-full flex flex-col  justify-between items-center shadow-lg rounded-lg overflow-hidden relative group"
-              >
+              <div className="h-full w-full flex flex-col  justify-between items-center shadow-lg rounded-lg overflow-hidden relative group">
                 <Image
                   src={item.image}
                   width={200}
@@ -59,12 +60,12 @@ function ProductsComponent({
                   </div>
                 </div>
                 <button
-                  className="
-                 bg-blue-400 text-white rounded px-1 md:px-2 absolute top-10 right-3 hidden group-hover:block"
+                  className="bg-blue-400 text-white rounded px-1 md:px-2 absolute top-10 right-3 hidden md:group-hover:block active:bg-blue-600"
                   onClick={(e) => addToCartHandler(item, e)}
                 >
                   +
                 </button>
+                
               </div>
             </Link>
           );

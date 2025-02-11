@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import {
   IProduct,
   IRandomProps,
-  TProductsBrand,
+  
 } from "@/serverTypes/serverTypes";
 import { getProducts } from "@/services/api";
 import RandomMobileComponent from "./RandomMobileComponent";
@@ -32,7 +32,6 @@ export default function RandomComponent({
     targetCategory,
     targetSubCategory,
     count,
-    getProducts,
     setTargetProducts,
   ]);
 

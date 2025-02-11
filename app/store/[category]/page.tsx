@@ -6,26 +6,8 @@ import CategoryComponent from "@/components/category/CategoryComponent";
 import Container from "@/components/container/Container";
 import Discount from "@/components/discount/Discount";
 import MainSlide from "@/components/mainSlide/MainSlide";
-import {
-  getBestSellingBrand,
-  getBrands,
-  getCategoryList,
-  getDiscount,
-  getProducts,
-  getSlider,
-} from "@/services/api";
-import {
-  IProductsLogo,
-  TSlides,
-  TCategories,
-  TDiscounts,
-  TProductsBrand,
-  TProducts,
-  IProduct,
-} from "@/serverTypes/serverTypes";
 import { useParams } from "next/navigation";
-import React, { useCallback, useEffect, useState } from "react";
-import ProductsPageComponent from "@/components/productsPageComponent/ProductsPageComponent";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/redux/store";
 import { fetchSliderData } from "@/redux/sliderSlice";

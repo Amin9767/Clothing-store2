@@ -1,14 +1,14 @@
 import { getProducts } from "@/services/api";
 import { IProduct, TGenderData } from "@/serverTypes/serverTypes";
 import Link from "next/link";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 
 export default function SearchComponent() {
   const [searchQuery, setSearchQuery] = useState("");
   const [results, setResults] = useState<IProduct[]>([]);
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     try {
       const data = await getProducts();
       const getData: TGenderData = data;
@@ -27,7 +27,8 @@ export default function SearchComponent() {
     } catch (error) {
       console.error("خطا در دریافت اطلاعات", error);
     }
-  };
+  }, [searchQuery]);
+
   useEffect(() => {
     if (!searchQuery.trim()) {
       setResults([]);
@@ -39,7 +40,7 @@ export default function SearchComponent() {
     return () => {
       clearTimeout(timer);
     };
-  }, [searchQuery]);
+  }, [searchQuery, fetchData]);
 
   // استفاده از useMemo برای بهینه‌سازی فیلتر کردن نتایج جستجو
   const filteredResults = useMemo(() => {

@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from "../carousel/Carousel";
-import { ISlide, TSlides } from "@/serverTypes/serverTypes";
+import { ISlide } from "@/serverTypes/serverTypes";
 interface IManSlideProps {
   mainDataSlider: ISlide[];
 }

@@ -15,7 +15,6 @@ interface BrandProps {
 export default function Brand({
   productsBrand,
   targetBrand,
-  category,
   py,
 }: BrandProps) {
   const findTargetBrand =

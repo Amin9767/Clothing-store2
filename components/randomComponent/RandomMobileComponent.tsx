@@ -8,7 +8,6 @@ export default function RandomMobileComponent({
   targetProducts,
   targetCategory,
   targetSubCategory,
-  count,
   py,
 }: { targetProducts: IProduct[] } & IRandomProps) {
   return (

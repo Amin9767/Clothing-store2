@@ -9,7 +9,6 @@ export default function RandomDesktopComponent({
   targetProducts,
   targetCategory,
   targetSubCategory,
-  count,
   py,
 }: { targetProducts: IProduct[] } & IRandomProps) {
   return (

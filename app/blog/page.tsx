@@ -10,7 +10,6 @@ import BlogCategoryImageComponent from "../../components/blogComponents/BlogCate
 import {
   IArticle,
   TArticles,
-  TBlogImages,
 } from "../../serverTypes/serverTypes";
 import BlogImagesComponent from "../../components/blogComponents/BlogImagesComponent";
 import BlogArticles from "@/components/blogComponents/BlogArticles";

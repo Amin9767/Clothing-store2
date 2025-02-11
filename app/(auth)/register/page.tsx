@@ -56,9 +56,9 @@ export default function RegisterForm() {
       setErrors([]);
     } catch (error) {
       setErrors(["خطایی در ثبت نام رخ داد.لطفا دوبازه تلاش کنید"]);
+      console.error(error);
     }
   };
-  
 
   return (
     <div className="max-w-md mx-auto mt-10 p-6 border rounded-lg shadow-md">

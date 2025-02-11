@@ -1,11 +1,10 @@
 "use client";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect } from "react";
 import { getDiscount } from "../../services/api";
 import RandomComponent from "../../components/randomComponent/RandomComponent";
 import BannerComponent from "../../components/bannerComponent/BannerComponent";
 import BannerComponent2 from "../../components/bannerComponent2/BannerComponent2";
 import BestSelling from "../../components/bestSellingBrands/BestSelling";
-import { TProductsDiscount } from "../../serverTypes/serverTypes";
 import MagazineComponent from "../../components/magazineComponent/MagazineComponent";
 import CategoryComponent from "@/components/category/CategoryComponent";
 import MainSlide from "@/components/mainSlide/MainSlide";
@@ -17,7 +16,6 @@ import { fetchBestSellingBrandsData } from "@/redux/bestSellingBrandsSlice";
 import { fetchDiscountData } from "@/redux/discountSlice";
 
 export default function Home() {
-  const [mainDiscount, setMainDiscount] = useState<TProductsDiscount[]>([]);
 
   const dispatch = useDispatch<AppDispatch>();
   const slider = useSelector((state: RootState) => state.slider.mainSlide);
@@ -38,8 +36,6 @@ export default function Home() {
 
       if (discountsResponse) {
         console.log(discountsResponse);
-        const getDiscount = discountsResponse.main;
-        setMainDiscount(getDiscount);
       }
     } catch (error) {
       console.error(error);
@@ -53,6 +49,7 @@ export default function Home() {
       <MainSlide mainDataSlider={slider} />
       <div>
         <CategoryComponent category={category} />
+        
         <RandomComponent
           targetCategory="مردانه"
           targetSubCategory="پیراهن"

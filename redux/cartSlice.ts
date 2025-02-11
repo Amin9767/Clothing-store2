@@ -20,17 +20,20 @@ export const cartSlice = createSlice({
         state.cart.push({ ...action.payload, quantity: 1 });
       }
     },
-    remove: (state, action) => {
+    remove: (state, action: PayloadAction<number>) => {
       state.cart = state.cart.filter((item) => item.id != action.payload);
     },
     updateQuantity: (
       state,
       action: PayloadAction<{ id: number; change: number }>
     ) => {
-      let { id, change } = action.payload;
-      let item = state.cart.find((item) => item.id == id);
+      const { id, change } = action.payload;
+      const item = state.cart.find((item) => item.id == id);
 
       if (item) item.quantity += change;
+    },
+    setCart: (state, action: PayloadAction<ICartItem[]>) => {
+      state.cart = action.payload;
     },
     clearCart: (state) => {
       state.cart = [];

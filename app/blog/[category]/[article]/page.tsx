@@ -44,11 +44,11 @@ export default function Article() {
       }
       console.log(targetArticle);
     }
-  }, [decodedParamsArticle]);
+  }, [paramsCat, decodedParamsArticle]);
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
   return (
     <div className="my-12">
       <Container>

@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "leaflet/dist/leaflet.css";
+
 @font-face {
   font-family: "lincoln";
   src: url("../public/fonts/AbrahamLincoln.ttf") format("ttf");

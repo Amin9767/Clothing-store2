@@ -1,6 +1,5 @@
 import Container from "../container/Container";
 import { useCallback, useEffect, useState } from "react";
-
 import { useParams } from "next/navigation";
 import { TProducts } from "@/serverTypes/serverTypes";
 import ProductsComponent from "./ProductsComponent";
@@ -42,7 +41,9 @@ export default function ProductsPageComponent({ products }: IProductsProps) {
       }
 
       setSortedProducts(filtered);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error)
+    }
   }, [minPrice, maxPrice, products]);
 
   const handleToggleMenu = (menu: "filter" | "sort") => {

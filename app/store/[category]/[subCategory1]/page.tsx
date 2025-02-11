@@ -6,7 +6,7 @@ import { getCategoryList, getProducts } from "@/services/api";
 import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
-export default function subCategory1Page() {
+export default function SubCategory1Page() {
   const params = useParams();
   const getCat = decodeURIComponent(
     Array.isArray(params.category) ? params.category[0] : params.category
@@ -81,7 +81,7 @@ export default function subCategory1Page() {
       }
     };
     fetchData();
-  }, [getSubCat1]);
+  }, [getSubCat1,getCat]);
 
   return (
     <div>
